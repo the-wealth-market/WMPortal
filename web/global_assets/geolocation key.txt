@@ -1,0 +1,7 @@
+AIzaSyAWL9kdn_ztNOgS98mpZfAOfGBM8ttyCxs
+
+https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAWL9kdn_ztNOgS98mpZfAOfGBM8ttyCxs
+
+Reverse Geocoding API = https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyAWL9kdn_ztNOgS98mpZfAOfGBM8ttyCxs
+
+This is my key for Geolocation
