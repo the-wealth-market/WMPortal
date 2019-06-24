@@ -1,0 +1,86 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+ <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Profile</span> - My History</h4>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="breadcrumb-item">Profile</a>
+                    <span class="breadcrumb-item active">My History</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Timeline -->
+        <div class="timeline timeline-center">
+            <div class="timeline-container" id="userHistory">
+
+                <!-- Blog post -->
+                <div class="timeline-row timeline-row-full clone hide" id="timelinearray">
+                    <div class="timeline-icon">
+                        <img  class="histUserImage" alt="">
+                    </div>
+
+                    <div class="timeline-time">
+                        <a href="#" class="histUserName">Lucy</a>
+                        <div class="text-muted histTime">49 minutes ago</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header header-elements-sm-inline">
+                            <h6 class="card-title histTitle">Himalayan sunset</h6>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-img-actions mb-3">
+                                <img class="card-img img-fluid histUserImage"  alt="" style="width: 48px; height: 48px;">
+                                <div class="card-img-actions-overlay card-img">
+                                    <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round">
+                                        <i class="icon-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h6 class="mb-3">
+                                <i class="icon-comment-discussion mr-2"></i>
+                                <a href="#" class="histUserName">Jason Ansley</a> <span class="histUserType ml-3 text-muted italics"></span>
+                            </h6>
+
+                            <blockquote class="blockquote blockquote-bordered py-2 pl-3 mb-0">
+                                <p class="mb-2 font-size-base histDetails">When suspiciously goodness labrador understood rethought yawned grew piously endearingly inarticulate oh goodness jeez trout distinct hence cobra despite taped laughed the much audacious less inside tiger groaned darn stuffily metaphoric unihibitedly inside cobra.</p>
+                                <footer class="blockquote-footer histDate">Jason</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <!-- /blog post -->
+                <!-- /video post -->
+
+            </div>
+        </div>
+        <!-- /timeline -->
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div>

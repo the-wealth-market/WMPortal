@@ -1,0 +1,146 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Profile</span> - My Permissions</h4>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="breadcrumb-item">Profile</a>
+                    <span class="breadcrumb-item active">My Permissions</span>
+                </div>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+            <div class="header-elements d-none bizstaffLink">
+                <div class="breadcrumb justify-content-center">
+                    <button type="button" class="btn btn-light border-transparent breadcrumb-elements-item" 
+                            data-toggle="modal" data-target=".modal-request-permissions" data-popup="tooltip" data-placement="top"  data-original-title="Request for a new Business Permission" >
+                        <i class="icon-plus3 mr-2"></i> Request New Permission
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /page header -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-info-700">
+        <div class="text-center d-lg-none w-100">
+            <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-perms">
+                <i class="icon-menu7 mr-2"></i>
+                Permission Navigation
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-perms">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#myassiperm" class="navbar-nav-link active" data-toggle="tab">
+                        <i class="icon-blocked mr-2"></i>
+                        My Assigned Permissions
+                    </a>
+                </li>
+                <li class="nav-item bizLink hide">
+                    <a href="#myreqperms" class="navbar-nav-link" data-toggle="tab">
+                        <i class="icon-blocked mr-2"></i>
+                        My Requested Permissions
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Content area -->
+    <div class="content">
+
+        <div class="d-flex align-items-start flex-column flex-md-row">
+
+            <!-- Left content -->
+
+            <div class="tab-content w-100 overflow-auto">
+                <div class="tab-pane fade active show" id="myassiperm">
+
+                    <!--<div class="row">-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center mb-3 py-2">
+                                <h4 class="font-weight-semibold mb-1">Hi, <span class="UserName"></span></h4>
+                                <span class="text-muted d-block">Your current sign on is <span class="font-weight-bold UserType"></span></span> (What you can do)
+                            </div>
+                            <div class="row">
+                                <div class="row" id="UserPerms">
+                                    <div class="col-md-6 clone hide">
+                                        <a href="#" class="dropdown-item">
+                                            <i class="icon-blocked"></i> <span class="PermName"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--</div>-->
+                </div>
+
+                <div class="tab-pane fade" id="myreqperms">
+
+                    <div class="card">
+                        <div class="card-header header-elements-inline">
+                            <h5 class="card-title">Requested Permissions</h5>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item mr-3"> <span class="transTotalCount badge badge-primary rounded-circle p-2">0</span></a> 
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <table class="table datatable-basic table-hover table-bordered table-responsive-lg ">
+                            <thead class="bg-info-700">
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Name</th>
+                                    <th>Permission Name</th>
+                                    <th>Permission Description</th>
+                                    <th>Status</th>
+                                    <th>Date-Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="RequestedPermissions">
+                                <tr class="clone hide">
+                                    <td class="newPermCount">s/n</td>
+                                    <td class="newPermUserName" >Loading Trans Ref</td>
+                                    <td><a href="#" class="newPermName">Loading Transaction Name</a></td>
+                                    <td class=""><span class="newPermDesc">Loading Market Tool</span></td>
+                                    <td class="newPermStatus">Loading  Amount</td>
+                                    <td class="newPermDateAndTime">Loading  Date</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+
+            <!-- /right sidebar component -->
+
+        </div>
+
+
+
+    </div>
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+</div>

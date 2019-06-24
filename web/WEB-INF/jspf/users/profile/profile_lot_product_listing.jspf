@@ -1,0 +1,203 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div>
+    <form class="wizard-form listUserProductLotForm" action="#" data-fouc>
+        <h6 class="">lot products listing</h6>
+        <fieldset>
+            <p class="margintop marginbottom boldtext">please select the products you want to add to lot and then click continue</p>
+            <div class="card">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <h6 class="card-title">My Products</h6>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="reload"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Product Image</th>
+                                <th>Product Name</th>
+                                <th>Proposed Price</th>
+                                <th>Quantity</th>
+                                <th><div class="custom-control custom-checkbox" >
+                            <input type="checkbox" class="custom-control-input " name="" id="lotcheckAll">
+                            <label class="custom-control-label" for="lotcheckAll">Add all</label>
+                        </div>
+                        </th>
+                        <th>Sub-Total</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="UserPendingProductsList">
+
+                            <tr class="clone hide">
+                                <td class="productSN">1</td>
+                                <td class="pr-0" style="width: 45px;">
+                                    <a href="#">
+                                        <img class="productImage" height="60" alt="">
+                                    </a>
+                                </td>
+                                <td class="">
+                                    <a href="#" class="font-weight-semibold productName">Fathom Backpack</a>
+
+                                </td>
+                                <td class="productPrice">Orange</td>
+                                <td class="text-center">
+                                    <span class="productQuantity pl-3 pr-3"></span>
+                                </td>
+
+                                <td >
+                                    <label ><input type="checkbox" class="lotcheck" id="lotcheck" name="lotCheckedGood"></input>&nbsp; Add</label>
+                                </td>
+                                <td class="subtotalPrice"></td>
+
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="">
+                                <td class=""></td>
+                                <td class="">
+
+                                </td>
+                                <td class="">
+
+                                </td>
+                                <td class="">
+
+                                </td>
+                                <td class=""></td>
+                                <td class="">
+                                    Total:
+                                </td>
+                                <td id="lotTotal" class="hide">
+                                    0
+                                </td>
+                                <td id="gTotal">
+                                    0
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="marginbottom">
+
+                <p>please click on the cancel button below to go back and list new products to be added as lot</p>
+            </div>
+            <div class=" marginbottom">
+                <button class="btn btn-sm btn-danger left back marginbottom" ><i class="icon-cancel-circle2 mr-2"></i>cancel</button>
+            </div>
+
+        </fieldset>
+
+        <h6>Stock Release Percentage Settings</h6>
+        <fieldset>
+            <div class="col-md-8 text-center center double-margintop">
+                <p class="marginbottom margintop">what percentage(%) of your total listed products value do you want to sell on the WealthMarket? enter only the number e.g 10</p>
+                <div class="row">
+                    <div class="col-md-4">percentage (%)</div>
+                    <div class="form-group col-md-5">
+                        <input type="text" id="lotReleasePercent"  name="" class="form-control " placeholder="Release percentage" autocomplete="off" required>
+                    </div>
+                    <div class="col-md-3"><button class="btn btn-sm btn-success" id="lotReleaseSet">set percentage</button></div>
+                </div>
+                <div>
+                    <h5>Total value of products to be sold on the Wealthmarket: <span id="lotReleaseValue"></span></h5>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <h6>Lot Verification</h6>
+        <fieldset>
+            <p class="margintop marginbottom boldtext">please verify your lot listing details before final submission</p>
+            <div class="card">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <h6 class="card-title">My Lot Products</h6>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="reload"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Product Image</th>
+                                <th>Product Name</th>
+                                <th>Proposed Price</th>
+                                <th>Quantity</th>
+                                <th >
+                                    <label id="lotcheckAll"><input type="checkbox"></input> Add all</label>
+                                </th>
+                                <th>Sub-Total</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="UserLotProductsList">
+
+                            <tr class="clone hide">
+                                <td class="productSN">1</td>
+                                <td class="pr-0" style="width: 45px;">
+                                    <a href="#">
+                                        <img class="productImage" height="60" alt="">
+                                    </a>
+                                </td>
+                                <td class="">
+                                    <a href="#" class="font-weight-semibold productName">Fathom Backpack</a>
+
+                                </td>
+                                <td class="productPrice">Orange</td>
+                                <td class="text-center">
+                                    <span class="productQuantity pl-3 pr-3"></span>
+                                </td>
+
+                                <td >
+                                    <label ><input type="checkbox" class="lotcheck" id="lotcheck"></input>&nbsp; Add</label>
+                                </td>
+                                <td class="subtotalPrice"></td>
+
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="">
+                                <td class=""></td>
+                                <td class="">
+
+                                </td>
+                                <td class="">
+
+                                </td>
+                                <td class="">
+
+                                </td>
+                                <td class=""></td>
+                                <td class="">
+                                    Total:
+                                </td>
+                                <td id="gTotal">
+                                    0
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+

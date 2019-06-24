@@ -1,0 +1,128 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="flex-fill overflow-auto hide" id="ReadMessage">
+
+    <!-- Single mail -->
+    <div class="card">
+
+        <!-- Action toolbar -->
+        <div class="bg-light rounded-top">
+            <div class="navbar navbar-light bg-light navbar-expand-lg py-lg-2 rounded-top">
+                <div class="text-center d-lg-none w-100">
+                    <button type="button" class="navbar-toggler w-100 h-100" data-toggle="collapse" data-target="#inbox-toolbar-toggle-read">
+                        <i class="icon-circle-down2"></i>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse text-center text-lg-left flex-wrap collapse" id="inbox-toolbar-toggle-read">
+                    <div class="mt-3 mt-lg-0 mr-lg-3 sentbox">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success showInboxMessage">
+                                <i class="icon-circle-left2"></i>
+                                <span class="d-none d-lg-inline-block ml-2 ">Back</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger">
+                                <i class="icon-bin"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnDeleteMessage">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3 mt-lg-0 mr-lg-3 trashbox hide">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success showInboxMessage">
+                                <i class="icon-circle-left2"></i>
+                                <span class="d-none d-lg-inline-block ml-2 ">Back</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger">
+                                <i class="icon-bin"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnTrashMessage">Trash</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="icon-loop3"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnRecoverMessage">Recover</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="navbar-text ml-lg-auto date-time">12:49 pm</div>
+                </div>
+            </div>
+        </div>
+        <!-- /action toolbar -->
+
+
+        <!-- Mail details -->
+        <div class="card-body">
+            <div class="media flex-column flex-md-row">
+                <a href="#" class="d-none d-md-block mr-md-3 mb-3 mb-md-0 btn-icon">
+                    <!--<span class="btn bg-teal-400 btn-icon btn-lg rounded-round">-->
+                    <img  class="rounded-circle msg-Image" width="42" height="42" alt="">
+                    <!--</span>-->
+                </a>
+
+                <div class="media-body">
+                    <h6 class="mb-0 msg-title">New Imperatives for Enterprise Mobility</h6>
+                    <div class="letter-icon-title font-weight-semibold sendercnt"><span class="senderName">Amanda Smith</span> &lt;<a href="#" class="SenderEmail">jira@diakultd.atlassian.net</a>&gt;</div>
+                    <div class="letter-icon-title font-weight-semibold recievercnt"><span class="recipientName">Amanda Smith</span> <a href="#" class="RecieverEmail">&lt;jira@diakultd.atlassian.net&gt;</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- /mail details -->
+
+
+        <!-- Mail container -->
+        <div class="card-body">
+            <div class="overflow-auto mw-100 ">
+                <div class="msg-bdy"></div>
+
+            </div>
+        </div>
+        <!-- /mail container -->
+
+        <!-- Action toolbar -->
+        <div class="bg-light rounded-top">
+            <div class="navbar navbar-light bg-light navbar-expand-lg py-lg-2 rounded-top">
+                <div class="text-center d-lg-none w-100">
+                    <button type="button" class="navbar-toggler w-100 h-100" data-toggle="collapse" data-target="#inbox-toolbar-toggle-read">
+                        <i class="icon-circle-down2"></i>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse text-center text-lg-left flex-wrap collapse" id="inbox-toolbar-toggle-read">
+                     <div class="mt-3 mt-lg-0 mr-lg-3 sentbox">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success showInboxMessage">
+                                <i class="icon-circle-left2"></i>
+                                <span class="d-none d-lg-inline-block ml-2 ">Back</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger">
+                                <i class="icon-bin"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnDeleteMessage">Delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3 mt-lg-0 mr-lg-3 trashbox hide">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success showInboxMessage">
+                                <i class="icon-circle-left2"></i>
+                                <span class="d-none d-lg-inline-block ml-2 ">Back</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger">
+                                <i class="icon-bin"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnTrashMessage">Trash</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="icon-loop3"></i>
+                                <span class="d-none d-lg-inline-block ml-2 btnRecoverMessage">Recover</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="navbar-text ml-lg-auto date-time">12:49 pm</div>
+                </div>
+            </div>
+        </div>
+        <!-- /action toolbar -->
+    </div>
+    <!-- /single mail -->
+
+</div>
+<!-- /right content -->

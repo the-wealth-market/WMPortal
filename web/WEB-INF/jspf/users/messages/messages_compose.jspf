@@ -1,0 +1,288 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Messages</span> - Compose Message</h4>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <form action="#">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                        <input type="search" class="form-control wmin-200" id="SearchMessages" placeholder="Search messages">
+                        <div class="form-control-feedback">
+                            <i class="icon-search4 font-size-base text-muted"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="breadcrumb-item">New Message</a>
+                    <span class="breadcrumb-item active">Send Message</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Inner container -->
+        <div class="d-md-flex align-items-md-start">
+
+            <!-- Left sidebar component -->
+            <div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left border-0 shadow-0 sidebar-expand-md">
+
+                <!-- Sidebar content -->
+                <div class="sidebar-content">
+
+                    <!-- Actions -->
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <span class="text-uppercase font-size-sm font-weight-semibold">Actions</span>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Compose"  class="btn bg-indigo-400 btn-block">Compose mail</a>
+                        </div>
+                    </div>
+                    <!-- /actions -->
+
+
+                    <!-- Sub navigation -->
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <span class="text-uppercase font-size-sm font-weight-semibold">Navigation</span>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <ul class="nav nav-sidebar mb-2" data-nav-type="accordion">
+                                <li class="nav-item-header">Folders</li>
+                                <li class="nav-item">
+                                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="nav-link">
+                                        <i class="icon-drawer-in"></i>
+                                        Inbox
+                                        <span class="badge bg-success badge-pill ml-auto inboxcount">32</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Sent" class="nav-link">
+                                        <i class="icon-spam"></i>
+                                        Sent mail
+                                        <span class="badge bg-primary badge-pill ml-auto sentcount">99+</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Trash" class="nav-link">
+                                        <i class="icon-bin"></i> 
+                                        Trash
+                                        <span class="badge bg-danger badge-pill ml-auto trashcount">99+</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sub navigation -->
+
+
+                    <!-- Latest messages -->
+                    <div class="card">
+                        <%@include file="messages_unread.jspf" %>
+                    </div>
+                    <!-- /latest messages -->
+
+                </div>
+                <!-- /sidebar content -->
+
+            </div>
+            <!-- /left sidebar component -->
+
+
+            <!-- Right content -->
+            <div class="flex-fill overflow-auto">
+
+                <!-- Single mail -->
+                <div class="card">
+
+                    <!-- Action toolbar -->
+                    <div class="bg-light rounded-top">
+                        <div class="navbar navbar-light bg-light navbar-expand-lg py-lg-2 rounded-top">
+                            <div class="text-center d-lg-none w-100">
+                                <button type="button" class="navbar-toggler w-100 h-100" data-toggle="collapse" data-target="#inbox-toolbar-toggle-write">
+                                    <i class="icon-circle-down2"></i>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse text-center text-lg-left flex-wrap collapse" id="inbox-toolbar-toggle-write">
+
+                                <div class="mt-3 mt-lg-0 mr-lg-3">
+                                    <button type="button" class="btn bg-blue SendMessage"><i class="icon-paperplane mr-2"></i> Send mail</button>
+                                </div>
+
+                                <div class="navbar-text ml-lg-auto">12:49 pm</div>
+
+                                <div class="ml-lg-3 mb-3 mb-lg-0">
+                                    <button type="button" class="btn btn-light">
+                                        <i class="icon-cross2"></i>
+                                        <span class="d-none d-lg-inline-block ml-2">Cancel</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /action toolbar -->
+
+
+                    <!-- Mail details -->
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="align-top py-0" style="width: 1%">
+                                        <div class="py-2 mr-sm-3">Select:</div>
+                                    </td>
+                                    <td class="align-top py-0">
+                                        <div class="d-sm-flex flex-sm-wrap">
+                                            <select class="form-control form-control-select2 select-search select-clear border-0 
+                                                    border-left-primary-300"  id="MyContactslist">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-top py-0" style="width: 1%">
+                                        <div class="py-2 mr-sm-3">Search:</div>
+                                    </td>
+                                    <td class="align-top py-0">
+                                        <div class="d-sm-flex flex-sm-wrap">
+                                            <input type="text" class="form-control flex-fill w-auto py-2 px-0  rounded-0 border-0" id="searchText" placeholder="Search the user here">
+                                            <button type="button" class="btn bg-blue btn-sm pt-sm-2 pb-2 mb-0 ml-sm-3" id="SearchUsers" ><i class="icon-search4 mr-2"></i> Search</button>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-top py-0" style="width: 1%">
+                                        <div class="py-2 mr-sm-3">To:</div>
+                                    </td>
+                                    <td class="align-top py-0">
+                                        <div class="d-sm-flex flex-sm-wrap">
+                                            <input type="text" readonly  class="form-control flex-fill w-auto py-2 px-0 border-0 rounded-0" id="msguserEmail" placeholder="Select or Search Result">
+                                            <ul class="list-inline list-inline-dotted text-nowrap pt-sm-2 pb-2 mb-0 ml-sm-3">
+                                                <li class="list-inline-item hide"><a href="#" id="msguserID">0</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-top py-0">
+                                        <div class="py-2 mr-sm-3">Subject:</div>
+                                    </td>
+                                    <td class="align-top py-0">
+                                        <input type="text" id="msgsubject" class="form-control py-2 px-0 border-0 rounded-0" placeholder="Add subject">
+                                    </td>
+                                </tr>
+<!--                                <tr>
+                                    <td colspan="3">
+                                        <ul class="list-inline d-sm-flex flex-sm-wrap mb-0">
+                                            <li class="list-inline-item"><a href="#"><i class="icon-attachment mr-2"></i> Attach files</a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="icon-google-drive mr-2"></i> Google Drive</a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="icon-dropbox mr-2"></i> Dropbox</a></li>
+                                            <li class="list-inline-item ml-sm-auto"><a href="#"><i class="icon-cloud-upload2 mr-2"></i> Cloud drive</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /mail details -->
+
+
+                    <!-- Mail container -->
+                    <div class="card-body p-0">
+                        <div class="overflow-auto mw-100">
+                            <div class="summernote summernote-borderless"  id="msgbody">
+
+                                <!-- Email sample (demo) -->
+                                
+                                <!-- /email sample (demo) -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /mail container -->
+
+
+
+
+                    <!-- Action toolbar -->
+                   <div class="bg-light rounded-top">
+                        <div class="navbar navbar-light bg-light navbar-expand-lg py-lg-2 rounded-top">
+                            <div class="text-center d-lg-none w-100">
+                                <button type="button" class="navbar-toggler w-100 h-100" data-toggle="collapse" data-target="#inbox-toolbar-toggle-write">
+                                    <i class="icon-circle-down2"></i>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse text-center text-lg-left flex-wrap collapse" id="inbox-toolbar-toggle-write">
+
+                                <div class="mt-3 mt-lg-0 mr-lg-3">
+                                    <button type="button" class="btn bg-blue SendMessage"><i class="icon-paperplane mr-2"></i> Send mail</button>
+                                </div>
+
+                                <div class="navbar-text ml-lg-auto">12:49 pm</div>
+
+                                <div class="ml-lg-3 mb-3 mb-lg-0">
+                                    <button type="button" class="btn btn-light">
+                                        <i class="icon-cross2"></i>
+                                        <span class="d-none d-lg-inline-block ml-2">Cancel</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /action toolbar -->
+
+                </div>
+                <!-- /single mail -->
+
+            </div>
+            <!-- /right content -->
+
+        </div>
+        <!-- /inner container -->
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+
+    <!-- /footer -->
+
+</div>

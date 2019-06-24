@@ -1,0 +1,73 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-primary">
+            <h6 class="modal-title">SMS Instructions</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center mb-3 py-2">
+                <span class="text-muted d-block">How to perform SMS Instructions on The WealthMarket (SMS Transfer, Check Account Balances & Registrations)</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-body">
+                        <div class="media">
+                            <div class="mr-3">
+                                <a href="#"><i class="icon-transmission text-success-400 icon-2x mt-1"></i></a>
+                            </div>
+
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold"><a href="#" class="text-default">SMS Transfer</a></h6>
+                                <span class="form-text">For SMS Transfer please text: pay beneficiary amount pin to +12672024951</span>
+                                <span class="form-text font-weight-thin">For example text: pay someone@example.com 1000 1234 +12672024951</span>
+                                <span class="form-text font-weight-thin">beneficiary: email, phone number, wm-account number</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-body">
+                        <div class="media">
+                            <div class="mr-3">
+                                <a href="#"><i class="icon-cash4 text-warning-400 icon-2x mt-1"></i></a>
+                            </div>
+
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold"><a href="#" class="text-default">Check Account Balances</a></h6>
+                                <span class="form-text">For SMS Transfer please text: bal accounttype pin to +12672024951</span>
+                                <span class="form-text font-weight-thin">For example text: bal w/r/p 1234 to +12672024951</span>
+                                <span class="form-text font-weight-thin">w-Warrants, r-Reflation Rights, p-Par Cash Rights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-body">
+                        <div class="media">
+                            <div class="mr-3">
+                                <a href="#"><i class="icon-mail5 text-info icon-2x mt-1"></i></a>
+                            </div>
+
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold"><a href="#" class="text-default">SMS Registration</a></h6>
+                                <span class="form-text">For SMS Registration please text: reg email firstname lastname password to +12672024951</span>
+                                <span class="form-text font-weight-thin">For example text: reg someone@example.com FirstSaint LastStephen passwrd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>

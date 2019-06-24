@@ -1,0 +1,277 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="d-flex align-items-start flex-column flex-md-row">
+
+    <!-- Left content -->
+    <div class="w-100 order-2 order-md-1">
+
+        <!-- Filter toolbar -->
+        <div class="navbar navbar-expand-lg navbar-light navbar-component rounded">
+            <div class="text-center d-lg-none w-100">
+                <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-filter">
+                    <i class="icon-unfold mr-2"></i>
+                    Filters
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-filter">
+                <span class="navbar-text mr-3">
+                    Filter:
+                </span>
+
+                <ul class="navbar-nav flex-wrap">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-sort-time-asc mr-2"></i>
+                            By date
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Today</a>
+                            <a href="#" class="dropdown-item">Yesterday</a>
+                            <a href="#" class="dropdown-item">This week</a>
+                            <a href="#" class="dropdown-item">This month</a>
+                            <a href="#" class="dropdown-item">This year</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-sort-amount-desc mr-2"></i>
+                            By status
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Open (Pending)</a>
+                            <a href="#" class="dropdown-item">On Going</a>
+                            <a href="#" class="dropdown-item">Closed</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /filter toolbar -->
+        <div class="text-center text-muted content-divider mb-3 hide">
+            <span class="p-2">Today</span>
+        </div>
+
+        <!-- Invoice grid -->
+
+        <div class="row"id="listings">
+            <div class="col-lg-6 listclone hide">
+                <div class="card border-left-3 border-left-danger rounded-left-0 ">
+                    <div class="card-header d-sm-flex justify-content-sm-between align-items-sm-center">
+                        <h6 class="font-weight-bold list-fullname">Deemene Saint</h6>  
+                        <span class="mr-2"><i class="icon-watch2"></i>
+                            <span class="font-weight-thin list-time"> 11:22:00</span>
+                        </span>
+
+                    </div>
+                    <div class="card-body mt-0 neg-margintop">
+                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                            <div>
+                                <h6 class="font-weight-semibold">Offering:</h6>
+                                <ul class="list list-unstyled mb-0 parentlist-offer">
+                                    <li class="list-offer-clone">
+                                        <span class="list-offer">Par Cash Rights</span>  &nbsp;
+                                        <a href="#" class="badge bg-success align-top list-offer-value">$5,100</a>
+                                    </li> 
+                                </ul>
+                            </div>
+
+                            <div class="text-sm-right mb-0 mt-3 mt-sm-0 ml-auto">
+                                <h6 class="font-weight-semibold list-expect">Expecting:</h6>
+                                <ul class="list list-unstyled mb-0 " id="parentlist-expect">
+                                    <li class="list-expect-clone">
+                                        <span class="list-expect">Par Cash Rights</span>  &nbsp;
+                                        <a href="#" class="badge bg-warning align-top list-expect-value">$5,100</a>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                        <span>
+                            <span class="mr-2"><i class="icon-calendar22"></i></span>
+                            <span class="font-weight-semibold list-date">2018/03/24</span>
+                        </span>
+                        <span>
+                            <span class="badge bg-pink-300 mr-2 ml-2 list-bid-count">33</span>
+                        </span>
+                        <span>
+                            <span class="badge bg-primary mr-2 ml-2 list-status">Status</span>
+                        </span>
+
+                        <ul class="list-inline list-inline-condensed mb-0 mt-2 mt-sm-0">
+                            <li class="list-inline-item dropdown">
+                                <a href="#" class="text-default dropdown-toggle" data-toggle="dropdown"><i class="icon-menu7"></i></a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item text-blue-800"><i class="icon-cash3"></i> Buy</a>
+                                    <a href="#" class="dropdown-item text-success-800"><i class="icon-file-download"></i> Bid</a>
+                                    <a href="#" class="dropdown-item text-indigo-800 "><i class="icon-eye-plus"></i> View</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- /invoice grid -->
+
+
+    </div>
+    <!-- /left content -->
+
+
+    <!-- Right sidebar component -->
+    <div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-right border-0 shadow-0 order-1 order-md-2 sidebar-expand-md">
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+
+
+            <!-- Navigation -->
+            <div class="card">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <span class="card-title font-weight-semibold">Navigation</span>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body p-0">
+                    <div class="nav nav-sidebar mb-2">
+                        <li class="nav-item">
+                            <a data-toggle="modal" href=".modal_basic_buyWarrants" class="nav-link">
+                                <i class="icon-cash4"></i>
+                                Buy Warrant
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WarrantsMarket" class="nav-link">
+                                <i class="icon-googleplus5"></i>
+                                All Listings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyListings" class="nav-link">
+                                <i class="icon-compose"></i>
+                                My Listings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyBids" class="nav-link">
+                                <i class="icon-archive"></i>
+                                My Bids
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- /navigation -->
+
+
+            <!-- Filter -->
+            <div class="card">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <span class="text-uppercase font-size-sm font-weight-semibold">Selection <span class="text-capitalize">(In-Progress)</span></span>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="font-weight-semibold mb-3">Amount range:</div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" data-fouc>
+                                    ₦0 - ₦999
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" checked data-fouc>
+                                    ₦1,000 - ₦1,999
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" data-fouc>
+                                    ₦2,000 - ₦4,999
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" checked data-fouc>
+                                    ₦5,000 - ₦9,999
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" checked data-fouc>
+                                    ₦10,000 +
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="font-weight-semibold mb-3">Offering Instrument:</div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" checked data-fouc>
+                                    Warrants
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled"  data-fouc>
+                                    Reflation Rights 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-input-styled" data-fouc>
+                                    Par Cash Rights 
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <button type="reset" class="btn btn-light btn-block btn-sm">Reset</button>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-info btn-block btn-sm">Filter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /filter -->
+
+        </div>
+        <!-- /sidebar content -->
+
+    </div>
+    <!-- /right sidebar component -->
+
+</div>

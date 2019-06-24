@@ -1,0 +1,23 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header bg-primary">
+            <h6 class="modal-title">Semple Contract Document</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="ActualContractID hide"></div>
+            <div class="center">
+                <iframe  class="PDFContainer" type="application/pdf"  style="width:750px; height:700px;"></iframe>
+            </div>
+            <div class="row margintop hide">
+                <button type="button" class="btn btn-dropbox waves-effect waves-light w-md right"  id="GrandODLine" data-dismiss="modal">Grant OverDraft Line</button>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger waves-effect right w-md" data-dismiss="modal" id="Cancel">Cancel</button>
+        </div>
+    </div>
+</div>

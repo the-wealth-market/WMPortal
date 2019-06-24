@@ -1,0 +1,138 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Products </span> - List New Products</h4>
+            </div>
+        </div>
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="breadcrumb-item">Profile</a>
+                    <span class="breadcrumb-item active">List Products</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+    <!-- Content area -->
+    <div class="content">
+        <div class="card padding">
+            <div class="first-content">
+                <!-- Card content -->
+                <div class="card-body text-center mb-3">
+
+                    <!-- Title -->
+                    <h3 class="card-title h3 my-4"><strong>List your products on The WealthMarket</strong></h3>
+                    <!-- Text -->
+                    <p class="card-text py-2 double-marginbottom">
+                        You can list your products on the WealthMarket using various methods, you could list single products or list in bulk/batch or list by lot. select any method you want from the ones below</p>
+                    <div class="container double-margintop">
+                        <div class="col-lg-8 form-group row text-center center marginbottom">
+                            <label for="text">Search for a Product to list on the WealthMarket</label>
+                            <select name="searchProduct" data-placeholder="type a product name or hscode to search" 
+                                    id="searchProduct" class="form-control form-control-select1 select-search select-clear required autoCompleteContainer" data-fouc>
+
+                            </select>
+                        </div>
+                        <div class="marginbottom margintop"></div>
+                        <div class="col-lg-6 form-group row text-center center margintop">
+                            <button class="btn btn-dark form-control" id="prodSearch">Search for Product</button>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <!-- Card deck -->
+                <div class="card-deck">
+
+                    <!-- Card -->
+                    <div class="card mb-4 ">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title text-brown-800">Single listing</h4>
+                            <!--Text-->
+                            <p class="card-text">List a single product on the Wealthmarket</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <a href="#single-listing" class="btn" id="single-btn">
+                                <i class="icon-add mr-2"></i>
+                                List product now
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title text-brown-800">Batch/Bulk listing of products</h4>
+                            <!--Text-->
+                            <p class="card-text">List several products on the WealthMarket by using our excel template to create your product list and then upload</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <a href="#batch listing" class="btn" id="batch-btn">
+                                <i class="icon-file-stats mr-2"></i>
+                                Upload now
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title text-brown-800">Listing by lot</h4>
+                            <!--Text-->
+                            <p class="card-text">List several products as part of a lot and then choose the total amount you want to earn from the sales.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <a href="#lot-listing" class="btn" id="lot-btn">
+                                <i class="icon-bag mr-2"></i>
+                                List Lot
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+            </div>
+
+            <div class="second-content">
+                <div id="single-listing" class="hide">
+                    <h6>List a product on the WealthMarket</h6>
+                    <%@include file="profile_list_product.jspf" %>
+                </div>
+                <div id="lot-listing" class="hide">
+                    <h6>List products by lot on the WealthMarket</h6>
+                    <%@include file="profile_lot_product_listing.jspf" %>
+                </div>
+                <div id="batch-listing" class="hide">
+                    <h6>List bulk/batch products on the WealthMarket</h6>
+                    <%@include file="profile_batch_product_listing.jspf" %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

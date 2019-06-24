@@ -1,0 +1,143 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-primary">
+            <h6 class="modal-title">Transaction Details (<span class="TransactionId"></span>)</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+            <ul class="nav nav-tabs nav-tabs-solid border-0 nav-justified">
+                <li class="nav-item"><a href="#det-justified-dr" class="nav-link active" data-toggle="tab">Debit Entry Details</a></li>
+                <li class="nav-item"><a href="#det-justified-cr" class="nav-link" data-toggle="tab">Credit Entry Details</a></li>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="det-justified-dr">
+                    <div class="row">
+                        <table class="table datatable-basic table-hover table-responsive-lg ">
+                            <tbody class="">
+                                <tr class="table-success">
+                                    <td class="bold" style="width: 220px;">From Account Name</td>
+                                    <td class="SenderName"></td>
+                                </tr>
+                                <tr class="table-striped ttools hide">
+                                    <td class="bold">From Account Balance</td>
+                                    <td class="SenderBal"></td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="bold">From Account Number</td>
+                                    <td class="DebitAccountNumber"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Market Tool</td>
+                                    <td class="DebitAccountDefinitionName"></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td class="bold">Transaction Amount</td>
+                                    <td class="bold Amount"></td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="bold">Charges</td>
+                                    <td class="bold ChargesAmount"></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td class="bold">Entry</td>
+                                    <td class="bold "><span class="badge badge-danger">Debit</span></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td class="bold">Debit Amount </td>
+                                    <td class="bold DebitAmount">888</td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Transaction Type</td>
+                                    <td class="TransactionType"></td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="bold">Transaction Reference</td>
+                                    <td class="TransactionId"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Date/Time</td>
+                                    <td class="" id=""><span class="Date"></span>  -  <span class="Time"></span></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td class="bold">Comment</td>
+                                    <td class="Comment"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Description</td>
+                                    <td class="Description"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="det-justified-cr">
+                    <div class="row">
+                        <table class="table datatable-basic table-hover table-responsive-lg ">
+                            <tbody class="">
+                                <tr class="table-success">
+                                    <td class="bold" style="width: 220px;">To Account Name</td>
+                                    <td class="RecieverName"></td>
+                                </tr>
+                                <tr class="table-striped ttools hide">
+                                    <td class="bold">To Account Balance</td>
+                                    <td class="RecieverBal"></td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="bold">To Account Number</td>
+                                    <td class="CreditAccountNumber"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Market Tool</td>
+                                    <td class="CreditAccountDefinitionName"></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td class="bold">Transaction Amount</td>
+                                    <td class="bold Amount"></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td class="bold">Entry</td>
+                                    <td class="bold "><span class="badge-primary badge">Credit</span></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td class="bold">Credit Amount </td>
+                                    <td class="bold CreditAmount">888</td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Transaction Type</td>
+                                    <td class="TransactionType"></td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="bold">Transaction Reference</td>
+                                    <td class="TransactionId"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Date/Time</td>
+                                    <td class="" id=""><span class="Date"></span>  -  <span class="Time"></span></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td class="bold">Comment</td>
+                                    <td class="Comment"></td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td class="bold">Description</td>
+                                    <td class="Description"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+

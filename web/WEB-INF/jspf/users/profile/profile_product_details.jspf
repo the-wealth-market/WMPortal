@@ -1,0 +1,77 @@
+
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div  class="modal fade product-detail-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h6 class="modal-title">Product Details</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               	<div class="d-flex align-items-start flex-column flex-md-row">
+
+                    <!-- Left content -->
+                    <div class="w-100 overflow-auto order-2 order-md-1">
+                        <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                            <div class="mr-lg-3 mb-3 mb-lg-0">
+                                <div class="card-img-actions d-inline-block mb-3">
+                                    <img class="img-fluid rounded-circle product-details-image"  width="170" height="170" alt="">
+                                    <div class="card-img-actions-overlay card-img rounded-round">
+                                        <a class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round imagepopup" data-popup="lightbox">
+                                            <i class="icon-eye-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold">
+                                    <a href="#" class="product-detail-name">Fathom Backpack</a>
+                                </h6>
+
+                                <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                                    <li class="list-inline-item"><a href="#" class="text-muted product-detail-categoryname">Fashion</a></li>
+                                </ul>
+
+                                <p class="mb-3 product-details-description">It prepare is ye nothing blushes up brought. Or as gravity pasture limited evening on. Wicket around beauty say she. Frankness resembled say not new smallness you discovery. Noisier ferrars yet shyness weather ten colonel. Too him himself engaged husband pursuit musical...</p>
+                                <p class="mb-3 product-details-summary">It prepare is ye nothing blushes up brought. Or as gravity pasture limited evening on. Wicket around beauty say she. Frankness resembled say not new smallness you discovery. Noisier ferrars yet shyness weather ten colonel. Too him himself engaged husband pursuit musical...</p>
+
+                                <ul class="list-inline list-inline-dotted mb-0">
+                                    <li class="list-inline-item">Quantity <a href="#" class="product-detail-quantity">Aloha</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                                <h3 class="mb-0 font-weight-semibold product-detail-price">$49.99</h3>
+
+                                <div>
+                                    <i class="icon-star-full2 font-size-base text-warning-300"></i>
+                                    <i class="icon-star-full2 font-size-base text-warning-300"></i>
+                                    <i class="icon-star-full2 font-size-base text-warning-300"></i>
+                                    <i class="icon-star-full2 font-size-base text-warning-300"></i>
+                                    <i class="icon-star-full2 font-size-base text-warning-300"></i>
+                                </div>
+
+                                <div class="text-muted">85 reviews</div>
+
+                                <!--<button type="button" class="btn bg-teal-400 mt-3 product-id-gen"><i class="icon-cart-add mr-2"></i> Add to cart</button>-->
+                            </div>
+                            <!--</div>-->
+                        </div>
+
+                    </div>
+                    <!-- /left content -->
+
+
+
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="Cancel">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

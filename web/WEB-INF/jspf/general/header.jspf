@@ -1,0 +1,143 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<input type="hidden"  value="<%= session.getAttribute("Id")%>" id="userid"/>
+<input type="hidden"  value="<%= session.getAttribute("SwitchId")%>" id="switchuserid"/>
+<input type="hidden"  value="<%= session.getAttribute("usertype")%>" id="usertype"/>
+<input type="hidden"  value="<%= session.getAttribute("username")%>" id="username"/>
+<input type="hidden"  value="<%= session.getAttribute("categoryID")%>" id="catID"/>
+<input type="hidden"  value="<%= session.getAttribute("query")%>" id="query"/>
+<input type="hidden"  value="<%= session.getAttribute("paymentStatus")%>" id="paymentStatus"/>
+<div class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="navbar-brand">
+        <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="d-inline-block">
+            <img src="../../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+    <div class="d-md-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+            <i class="icon-tree5"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+            <i class="icon-paragraph-justify3"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-component-toggle profile_expander" type="button">
+            <i class="icon-unfold"></i>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                    <i class="icon-paragraph-justify3"></i>
+                </a>
+            </li>
+            <li class="nav-item profile_expander">
+                <a href="#" class="navbar-nav-link sidebar-control sidebar-component-toggle d-none d-md-block">
+                    <i class="icon-drag-right"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown headercontact">
+                <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+                    <i class="icon-people"></i>
+                    <span class="d-md-none ml-2">Contacts</span>
+                    <span class="badge badge-pill bg-warning-400 ml-auto ml-md-0 ContactTotalCount">0</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-content wmin-md-350">
+                    <div class="dropdown-content-header">
+                        <span class="font-weight-semibold">Contacts</span>
+                        <a href=".bd-example-modal-1"  data-toggle="modal" class="text-default"><i class="icon-add"></i></a>
+                    </div>
+
+                    <div class="dropdown-content-body dropdown-scrollable">
+                        <ul class="media-list profile_userContacts2">
+                            <li class="media contactclone">
+                                <div class="mr-3">
+                                    <img  width="36" height="36" class="rounded-circle UsercontactImage" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <a href="#" class="media-title font-weight-semibold UsercontactName">Loading Name</a>
+                                    <span class="d-block text-muted font-size-sm UsercontactType">Loading Type</span>
+                                </div>
+                                <div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content-footer justify-content-center p-0">
+                        <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Contacts" class="bg-light text-grey w-100 py-2" data-popup="tooltip" title="All Contacts"><i class="icon-menu7 d-block top-0"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Online</span>
+        </span>
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge badge-mark border-success-300 mr-2"></span>
+            <span class="greeting"></span>
+        </span>
+
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+                    <i class="icon-bubbles4"></i>
+                    <span class="d-md-none ml-2">Messages</span>
+                    <span class="badge badge-pill bg-warning-400 ml-auto ml-md-0 unreadcount">0</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+                    <div class="dropdown-content-header">
+                        <span class="font-weight-semibold">Messages</span>
+                        <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Compose" class="text-default"><i class="icon-compose"></i></a>
+                    </div>
+
+                    <div class="dropdown-content-body dropdown-scrollable">
+                        <ul class="media-list unreadmessagelist">
+                            <li class="media unreadclone hide">
+                                <div class="mr-3 position-relative">
+                                    <img  width="36" height="36" class="rounded-circle unreadMsgImage" alt="">
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold unreadMsgSubject ">Loading Name</span>
+                                            <span class="text-muted float-right font-size-sm unreadMsgTime">04:58</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted unreadMsgBody">who knows, maybe that would be the best thing for me...</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content-footer justify-content-center p-0">
+                        <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="bg-light text-grey w-100 py-2" data-popup="tooltip" title="All Unread Messages">
+                            <i class="icon-menu7 d-block top-0"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown dropdown-user">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img class="rounded-circle UserImage" alt="" width="36" height="36">
+                    <span class="UserName">Loading Name</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="dropdown-item"><i class="icon-user-plus"></i> My Profile</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Accounts" class="dropdown-item"><i class="icon-coins"></i> My Accounts</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="dropdown-item"><i class="icon-comment-discussion"></i> My Messages <span class="badge badge-pill bg-blue ml-auto unreadcount">0</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item CallLogout"><i class="icon-switch2"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

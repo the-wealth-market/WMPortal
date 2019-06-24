@@ -1,0 +1,250 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Content area -->
+<div class="content">
+    <div class="row">
+
+        <div class="col-sm-4 col-xl-4">
+            <div class="card card-body bg-primary-400 has-bg-image">
+                <div class="media mb-3">
+                    <div class="mr-3 align-self-center">
+                        <i class="icon-user icon-2x"></i>
+                    </div>
+
+                    <div class="media-body">
+                        <h4 class="font-weight-semibold  mb-0 AcctAccountName">Loading Account Number</h4>
+                    </div>
+                </div>
+
+                <div class="progress bg-success mb-2" style="height: 0.125rem;">
+                    <div class="progress-bar bg-white" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                    </div>
+                </div>
+
+                <div>
+                    Account Name
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-4">
+            <div class="card card-body bg-success-400 has-bg-image">
+                <div class="media mb-3">
+                    <div class="mr-3 align-self-center">
+                        <i class="icon-cash2 icon-2x"></i>
+                    </div>
+
+                    <div class="media-body">
+                        <h6 class="font-weight-semibold mb-0 AcctAccountType">Loading Account Type</h6>
+                    </div>
+                </div>
+
+                <div class="progress bg-success mb-2" style="height: 0.125rem;">
+                    <div class="progress-bar bg-white" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                    </div>
+                </div>
+
+                <div>
+                    Account Type
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-4">
+            <div class="card card-body bg-indigo-400 has-bg-image">
+                <div class="media mb-3">
+                    <div class="mr-3 align-self-center">
+                        <i class="icon-sort-numeric-asc icon-2x"></i>
+                    </div>
+
+                    <div class="media-body">
+                        <h6 class="font-weight-semibold mb-0 AcctAccountNumber">Loading Account Number</h6>
+                    </div>
+                </div>
+
+                <div class="progress bg-indigo mb-2" style="height: 0.125rem;">
+                    <div class="progress-bar bg-white" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                    </div>
+                </div>
+
+                <div>
+                    Account Number
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6 col-xl-3">
+            <div class="card card-body bg-teal-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctLedgerBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">Available Balance</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash4 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="card card-body bg-indigo-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctDirectBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">Direct Balance</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash3 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="card card-body bg-teal-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctEscrowBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">Escrow Balance</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash4 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="card card-body bg-indigo-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctBlockedBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">Blocked Balance</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash3 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6 col-xl-6">
+            <div class="card card-body bg-green-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctODLineBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">ODLine Balance  <span class="font-size-sm text-capitalize text-orange-300">(Amount To Be Refunded)</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash2 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-6 hide" id="offbal">
+            <div class="card card-body bg-orange-800 has-bg-image">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mb-0 AcctOfflineBalance">Loading Amount</h3>
+                        <span class="text-uppercase font-size-xs">Offline Balance</span>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <i class="icon-cash2 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /simple statistics -->
+
+
+    <div class="card">
+        <div class="card-header header-elements-inline">
+            <h5 class="card-title">Recent Transactions</h5>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item mr-3"> <span class="transTotalCount badge badge-primary rounded-circle p-2"></span></a> 
+                    <a class="list-icons-item mr-2" data-action="collapse"></a>
+                    <div class="dropdown">
+                        <a href="#" class="list-icons-item " data-toggle="dropdown">
+                            <i class="icon-menu9"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a  data-toggle="modal" data-target=".bd-example-tdmodal3" class="dropdown-item text-primary"><i class="icon-credit-card"></i> Generate Account Statement</a>
+                            <a  data-toggle="modal" data-target=".TransPeriodModal" class="dropdown-item text-warning"><i class="icon-credit-card2"></i> Select Transaction Period</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <table class="table datatable-basic table-hover table-bordered table-responsive-lg ">
+            <thead class="bg-primary-400">
+                <tr>
+                    <th>S/N</th>
+                    <th>Transaction Reference</th>
+                    <th>Transaction Type</th>
+                    <th>Transaction</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="RecentTransDisplay">
+                <tr class="transclone hide">
+                    <td class="transCount">s/n</td>
+                    <td class="transID" >Loading Trans Ref</td>
+                    <td><a href="#" class="transName">Loading Transaction Name</a></td>
+                    <td class=""><span class="transTool">Loading Market Tool</span></td>
+                    <td class="transAmount">Loading  Amount</td>
+                    <td class="transDate">Loading  Date</td>
+                    <td class="text-center">
+                        <div class="list-icons">
+                            <div class="dropdown">
+                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                    <i class="icon-menu9"></i>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a data-toggle="modal" data-target=".TransDetailsModal" class="dropdown-item ViewTransDetails"><i class="icon-microscope"></i> View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /content area -->
+<div  class="modal fade TransDetailsModal">
+    <%@include file="accounts_transaction_details.jspf" %>
+</div>
+<div  class="modal fade bd-example-tdmodal3">
+    <%@include file="accounts_generate_statement.jspf" %>
+</div>
+<div  class="modal fade TransPeriodModal">
+    <%@include file="accounts_generate_transactions.jspf" %>
+</div>
+
+
+

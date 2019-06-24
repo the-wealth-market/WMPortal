@@ -1,0 +1,101 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-success">
+            <h6 class="modal-title">Add New Staff</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="searchcontainer">
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <div class=" form-group-feedback form-group-feedback-left">
+                            <input type="search" parsley-type="search" class="form-control" id="staffsearch" name="search" placeholder="Who are you looking for? Search with name, email address or phone number" required parsley-trigger="change">
+                            <div class="form-control-feedback">
+                                <i class="icon-search4 text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="card">
+                    <div class="card-header header-elements-inline">
+                        <h5 class="card-title">Search Result(s)</h5>
+                        <div class="header-elements">
+                            <div class="list-icons">
+                                <a class="list-icons-item" data-action="collapse"></a>
+                                <a class="list-icons-item" data-action="reload"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <ul class="media-list staff-list">
+                            <li class="media contact-list-clone hide">
+                                <div class="mr-3">
+                                    <a href="#">
+                                        <img class="rounded-circle contact-list-Image" width="40" height="40" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="media-title font-weight-semibold contact-list-name">Loading Name</div>
+                                    <span class="text-muted contact-list-email">Loading email</span>
+                                    <span class="hide" id="contact-list-userid">1</span>
+                                </div>
+
+                                <div class="align-self-center ml-3">
+                                    <div class="list-icons">
+                                        <div class="list-icons-item dropdown">
+                                            <a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href=".bd-example-modaltransfer" class="dropdown-item  text-violet-300 transferbtn" data-toggle="modal"><i class="icon-transmission"></i> Perform Quick Transfer</a>
+                                                <a href="#" class="dropdown-item text-success-300 sendmsgbtn" data-toggle="modal" data-target="#video"><i class="icon-envelop5"></i> Send Message</a>
+                                                <a href="#" class="dropdown-item text-blue-300 addcontactbtn" data-toggle="modal" data-target="#video"><i class="icon-plus3"></i> Add To Contact List</a>
+                                                <a href="#" class="dropdown-item text-blue-300 addstaffbtn" data-toggle="modal" data-target="#call"><i class="icon-add"></i> Add To Staff List</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row permcontainer hide">
+                <div class="col-md-12 border-bottom-1 border-bottom-green-300 mb-3">
+                    <label class="font-size-base font-weight-semibold">Select permission(s) and assign to <span class="uname badge bg-primary-400 font-size-lg"></span> <span class="unameid"></span> </label>
+                    <div class="">
+                        <div class="btn-group-toggle BusinessPermissionsList"  data-toggle="buttons">
+                            <label class="btn btn-success btn-outline-success mt-1 clone   mr-1">
+                                <input type="checkbox" class="objectTypePermCheck form-control-sm" id="objectTypePermCheck" name="objectTypePermCheck"/>
+                                <i class="icon-checkmark-circle mr-1"></i> <span class="objName"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="text-center align-self-center">
+                            <div class="form-group">
+                                <input type="submit" id=""  name="name" value="Sumbit" class="btn bg-teal-400 CreateBizStaffAndAssignPerms"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+        </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,97 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="card card-sidebar-mobile">
+    <ul class="nav nav-sidebar" data-nav-type="accordion">
+        <!-- Main -->
+        <li class="nav-item">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="nav-link" id="id-dashboard">
+                <i class="icon-home4"></i>
+                <span>
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        <li class="nav-item nav-item-submenu">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" id="id-profile" class="nav-link"><i class="icon-user"></i> <span>Profile</span></a>
+
+            <ul class="nav nav-group-sub" data-submenu-title="Profile">
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="nav-link" id="id-profile_details"><i class="icon-profile "></i>My Details</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Contacts" class="nav-link" id="id-profile_contacts"><i class="icon-address-book2"></i>My Contacts</a></li>
+                <li class="nav-item bizstaffLink"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Staff" class="nav-link" id="id-profile_staff"><i class="icon-address-book"></i>My Staff</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=History" class="nav-link" id="id-profile_history"><i class="icon-stats-bars2"></i>My Histories</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Favorites" class="nav-link" id="id-profile_favorite"><i class="icon-heart6"></i>My Favorites</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Products" class="nav-link" id="id-profile_products"><i class="icon-bag"></i>My Products</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Products_Listing" class="nav-link" id="id-profile_products_listing"><i class="icon-add"></i>List Products</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Services" class="nav-link" id="id-profile_services"><i class="icon-portfolio"></i>My Services</a></li>                       
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Permissions" class="nav-link" id="id-profile_permissions"><i class="icon-blocked"></i>My Permissions</a></li>                       
+            </ul>
+        </li>
+        <li class="nav-item nav-item-submenu">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="nav-link" id="id-messages"><i class="icon-envelop5"></i> <span>Messages</span></a>
+            <ul class="nav nav-group-sub" data-submenu-title="Messages">
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Compose" class="nav-link" id="id-messages-compose"><i class="icon-pencil5"></i>Compose</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Messages" class="nav-link" id="id-messages-inbox"><i class="icon-mail-read"></i>Inbox</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Sent" class="nav-link" id="id-messages-sent"><i class="icon-mailbox"></i>Sent</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Trash" class="nav-link" id="id-messages-trash"><i class="icon-trash"></i>Trash</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item nav-item-submenu">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Accounts" class="nav-link" id="id-accttrans"> <i class="icon-city"></i><span>Accounts & Transactions</span></a>
+            <ul class="nav nav-group-sub" data-submenu-title="Accounts & Transaction">
+                <li class="nav-item cursor-pointer"><a id="QTransferBtn"  class="nav-link"><i class="icon-transmission"></i>Quick Transfer</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Accounts" class="nav-link" id="id-accttrans-warrants"><i class="icon-cash2"></i>Warrants</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Reflation" class="nav-link" id="id-accttrans-reflation"><i class="icon-cash3"></i>Reflation Rights</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=ParCash" class="nav-link" id="id-accttrans-parcash"><i class="icon-cash4"></i>Par Cash Rights</a></li>
+                <li class="nav-item cursor-pointer"><a id="changePin" class="nav-link"><i class="icon-rotate-cw2"></i>Change Transaction Pin</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link SMSTransactions"><i class="icon-mail5"></i>SMS Instructions</a></li>
+            </ul>
+        </li>
+        <li class="nav-item nav-item-submenu bizBusinessLink">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Business" class="nav-link" id="id-biz"><i class="icon-briefcase"></i> <span>Businesses</span></a>
+            <ul class="nav nav-group-sub" data-submenu-title="Business">
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Business" class="nav-link"  id="id-biz-biz"><i class="icon-store2"></i>My Business(es)</a></li>
+            </ul>
+        </li>
+
+
+
+        <!-- Components -->
+        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">General</div> <i class="icon-menu" title="Components"></i></li>
+
+        <li class="nav-item nav-item-submenu">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WarrantsMarket" class="nav-link"  id="id-wm"><i class="icon-cash4"></i> <span>Warrants Market</span></a>
+            <ul class="nav nav-group-sub" data-submenu-title="Warrants Market">
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WarrantsMarket" class="nav-link"   id="id-wm-wmarket"><i class="icon-credit-card"></i>All Listings</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyBids" class="nav-link"   id="id-wm-mybids"><i class="icon-cash2"></i>My Bids</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyListings" class="nav-link"  id="id-wm-mylisting"><i class="icon-credit-card2"></i>My Listings</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link buyWarrants"><i class="icon-wallet"></i>Buy Warrants</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-item-submenu">
+            <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Semple" class="nav-link" id="id_main_semple"><i class="icon-cube3"></i> <span>Schemes</span></a>
+
+            <ul class="nav nav-group-sub" data-submenu-title="Schemes">
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Semple" class="nav-link" id="id_semple_semple"><i class="icon-package"></i>Semple</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=UPPEP" class="nav-link" id="id_semple_uppep"><i class="icon-power2"></i>UPPEP</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MANSAR" class="nav-link" id="id_semple_mansar"><i class="icon-pyramid2"></i>MANSAR</a></li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Monetisation" class="nav-link" id="id_main_money"><i class="icon-coins"></i>Monetisation</a>
+                    <ul class="nav nav-group-sub">
+                        <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Monetisation" class="nav-link" id="id_main_mobi"><i class="icon-chess-king"></i>Monetisation</a></li>
+                        <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Mobilisation" class="nav-link" id="id_main_mobi"><i class="icon-chess-king"></i>Mobilisation</a></li>
+                        <li class="nav-item"><a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Commoditisation" class="nav-link" id="id_main_commod"><i class="icon-stats-growth"></i>Commoditisation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <!-- /page kits -->
+
+    </ul>
+</div>
+<!-- /main navigation -->
+
+</div>
+<!-- /sidebar content -->
+</div>

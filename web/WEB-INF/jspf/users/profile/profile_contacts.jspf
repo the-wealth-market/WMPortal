@@ -1,0 +1,117 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Profile</span> - My Contacts</h4>
+            </div>
+
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="breadcrumb-item">Profile</a>
+                    <span class="breadcrumb-item active">My Contacts</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center">
+                    <button type="button" class="btn btn-light border-transparent breadcrumb-elements-item" 
+                            data-toggle="modal" data-target=".bd-example-modal-1">
+                        <i class="icon-plus3 mr-2"></i> Add New Contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+
+    <!-- Content area -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Use search to find contacts. You can search by: name, address, phone. Or use the advanced search.</p>
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <div class=" form-group-feedback form-group-feedback-left">
+                                    <input type="search" parsley-type="search" class="form-control" name="email" placeholder="Who are you looking for? Search with name, email address or phone number" required parsley-trigger="change">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-search4 text-muted"></i>
+                                    </div>
+                                </div>
+
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary btn-sm">Search</button>
+                                </div></div>
+                        </form>                                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Rounded thumbs -->
+        <div class="row profile_userContacts">
+            <div class="col-xl-3 col-sm-6 contactclone"> 
+                <div class="card card-body text-center ">
+                    <div class="mb-3">
+                        <h6 class="font-weight-semibold mb-0 mt-1 UsercontactName">St Stephen</h6>
+                        <span class="d-block text-muted UsercontactType">Chief officer</span>
+                    </div>
+
+                    <a href="#" class="d-inline-block mb-3">
+                        <img class="rounded-round UsercontactImage" width="150" height="150" alt="">
+                    </a>
+
+                    <ul class="list-inline list-inline-condensed mb-0">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-outline bg-primary btn-icon text-primary border-primary border-2 rounded-round btntransfer" 
+                               data-toggle="modal" data-target=".bd-example-modaltransfer"
+                               data-popup="tooltip" title="Quick Transfer" >
+                                <i class="icon-transmission"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a data-popup="tooltip" title="Send Message"  href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Compose" 
+                               class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round btnSendContactMsg">
+                                <i class="icon-envelop5"></i></a>
+                        </li>
+                        <li class="list-inline-item"  >
+                            <a href="#"  data-popup="tooltip" title="Delete"
+                               class="btn btn-outline bg-danger-800 btn-icon text-danger-800 border-danger-800 border-2 rounded-round btnDeleteContact">
+                                <i class="icon-trash"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /rounded thumbs-->
+
+       
+
+
+        <!-- /horizontal cards -->
+
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div>  

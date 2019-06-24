@@ -1,0 +1,225 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Profile</span> - My Products</h4>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Profile" class="breadcrumb-item">Profile</a>
+                    <span class="breadcrumb-item active">My Products</span>
+                </div>
+                <div class="breadcrumb ml-3 inpectionfee">
+                    <span class="breadcrumb-item ml-3 text-danger-800">Please you are expected to pay the sum of <strong>₦1,500.00 for Inspection and Approval</strong> of your products</span>
+                    <a href="#" data-popup="tooltip" id="PayInspectionFees" title="Click to Pay Inspection Fees" data-placement="top" data-toggle="modal" class="breadcrumb-elements-item">
+                        <i class="icon-cash2 mr-1 ml-2"></i>
+                        Pay
+                    </a>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center ">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Products_Listing" class="breadcrumb-elements-item boldtext " >
+                        <i class="icon-plus3 mr-1"></i>List New Product                       
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Profile navigation -->
+        <div class="navbar navbar-expand-lg navbar-dark bg-info-700">
+            <div class="text-center d-lg-none w-100">
+                <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-second">
+                    <i class="icon-menu7 mr-2"></i>
+                    Product Navigation
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-second">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="#listedProducts" class="navbar-nav-link active" data-toggle="tab">
+                            <i class="icon-bag mr-2"></i>
+                            My Product Listings
+                            <span class="badge badge-pill bg-success position-static ml-auto ml-lg-2 listedProductsNum">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#orderProducts" class="navbar-nav-link" data-toggle="tab">
+                            <i class="icon-calendar3 mr-2"></i>
+                            My Ordered Products
+                            <span class="badge badge-pill bg-success position-static ml-auto ml-lg-2 listedOrderedProductsNum">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /profile navigation -->
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+        <div class="d-flex align-items-start flex-column flex-md-row">
+            <!-- Left content -->
+
+            <div class="tab-content w-100 overflow-auto">
+                <div class="tab-pane fade active show" id="listedProducts">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">My Products</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th >Product Image</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Proposed Price</th>
+                                        <th>Supplied Quantity</th>
+                                        <th>Status</th>
+                                        <th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ProductsList">
+
+                                    <tr class="clone hide">
+                                        <td class="productSN">1</td>
+                                        <td class="pr-0" style="width: 45px;">
+                                            <a href="#">
+                                                <img class="productImage" height="60" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="">
+                                            <a href="#" class="font-weight-semibold productName">Fathom Backpack</a>
+                                            <div class="text-muted font-size-sm overflow-auto"   style="width: 280px;">
+                                                <div class="productDesc"></div>
+                                                <!--<div class="productSummary text-blue-300"></div>-->
+
+                                            </div>
+                                        </td>
+                                        <td class="productCategory">34cm x 29cm</td>
+                                        <td class="productPrice">Orange</td>
+                                        <td class="text-center">
+                                            <span class="productQuantity pl-3 pr-3"></span>
+                                        </td>
+                                        <td> <span class="productStatus"></span></td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <div class="list-icons-item dropdown">
+                                                    <a href="#" class="list-icons-item" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item text-danger-800 btnDeleteProduct hide"><i class="icon-trash"></i> Delete Product</a>
+                                                        <a href=".product-detail-modal" data-toggle="modal"  class="dropdown-item text-primary-800 btnViewProductDetatails hide"><i class="icon-microscope"></i> View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="orderProducts">
+
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title">Ordered history</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                       <div class="table-responsive">
+                        <table class="table text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Ordered Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Product Serial Number</th>
+                                    <th>Order Number</th>
+                                    <th>Order Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="OrderedProductsList">
+                                <tr class="clone">
+                                    <td class="productSN">1</td>
+                                    <td class="pr-0" style="width: 45px;">
+                                        <a href="#">
+                                            <img class="productImage" height="60" alt="">
+                                        </a>
+                                    </td>
+                                    <td class="">
+                                        <a href="#" class="font-weight-semibold productName">Fathom Backpack</a>
+                                        <div class="text-muted font-size-sm overflow-auto"   style="width: 280px;">
+                                            <div class="productSummary"></div>
+                                            <!--<div class="productSummary text-blue-300"></div>-->
+
+                                        </div>
+                                    </td>
+                                    <td class="productCategory">34cm x 29cm</td>
+                                    <td class="text-center">
+                                        <span class="productQuantity pl-3 pr-3"></span>
+                                    </td>
+                                    <td class="productPrice">Orange</td>
+                                    <td> <span class="productSerialNumber"></span></td>
+                                    <td> <span class="productOrderNumber"></span></td>
+                                    <td> <span class="productStatus"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+
+            <!-- /right sidebar component -->
+
+        </div>
+        <%@include file="profile_product_details.jspf" %>
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div>

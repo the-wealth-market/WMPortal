@@ -1,0 +1,29 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header bg-primary">
+            <h6 class="modal-title">Semple Contract Document</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="ContrtID" class="hide">2test</div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="PendingContract">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center center">
+                <button type="button" class="btn btn-success btn-sm right marginright"  id="AcceptContract" data-dismiss="modal">Accept And Sign Contract</button>
+                <button type="button" class="btn btn-danger btn-sm left marginleft" id="RejectContract" data-dismiss="modal">Reject Contract</button>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger right" data-dismiss="modal" id="Cancel">Close</button>
+        </div>
+    </div>
+</div>

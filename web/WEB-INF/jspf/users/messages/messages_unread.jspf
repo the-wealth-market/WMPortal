@@ -1,0 +1,26 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="card-header bg-transparent header-elements-inline">
+    <span class="text-uppercase font-size-sm font-weight-semibold">Latest messages  
+        <span class="badge bg-warning-300 badge-pill ml-3 unreadcount">99+</span>
+    </span>
+    <div class="header-elements">
+        <div class="list-icons">
+            <a class="list-icons-item" data-action="collapse"></a>
+        </div>
+    </div>
+</div>
+
+<ul class="media-list media-list-linked my-2 unreadmessagelist h-25">
+    <li class="clone hide">
+        <a href="#" class="media">
+            <div class="mr-3">
+                <img width="36" height="36" class="rounded-circle unreadMsgImage" alt="">
+            </div>
+            <div class="media-body">
+                <div class="media-title font-weight-semibold unreadMsgSubject">Will Samuel</div>
+                <span class="text-muted unreadMsgBody">And he looked over at the alarm clock, ticking..</span>
+            </div>
+        </a>
+    </li>
+</ul>

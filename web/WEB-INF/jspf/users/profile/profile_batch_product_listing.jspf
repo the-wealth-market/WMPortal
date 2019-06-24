@@ -1,0 +1,104 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="">
+    <form class="wizard-form UploadProductExcelForm" action="${pageContext.request.contextPath}/ProductExcelServlet" method="POST" enctype="multipart/form-data" id="excelUploadForm" data-fouc>
+        <h6>Enter Products Category details</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Select a top Category: <span class="text-danger">*</span></label>
+                        <select name="prodTopCategories" data-placeholder="Select a Category" 
+                                id="prodTopCategories" class="form-control form-control-select2 select-search select-clear " data-fouc>
+
+                        </select>
+                    </div>
+                    <div class="form-group prod-cat-info hide">
+                        <label>Select a Category: <span class="text-danger">*</span></label>
+                        <select name="prodCategories" data-placeholder="Select a Category" 
+                                id="prodCategories" class="form-control form-control-select2 select-search select-clear required" data-fouc>
+
+                        </select>
+                    </div>
+                    <div class="form-group prod-sub-cat-info hide">
+                        <label>Select a sub-Category: <span class="text-danger">*</span></label>
+                        <select name="prodSubCategories" data-placeholder="Select a Category" 
+                                id="prodSubCategories" class="form-control form-control-select2 select-search select-clear required" data-fouc>
+
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </fieldset>
+
+        <h6>Products sheet setup</h6>
+        <fieldset>
+            <div class="center text-center">
+                <h6 class="text-center boldtext">please set your products excel sheet as shown below using .xls format</h6>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>S/N</th>
+                            <th>Product Name</th>
+                            <th>Summary</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Properties</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (int i = 1; i < 5; i++) { %>
+                        <tr>
+                            <th>1</th>
+                            <th>carrot</th>
+                            <th>yellow fruit</th>
+                            <th>small hard fruit</th>
+                            <th>#200</th>
+                            <th>40</th>
+                            <th></th>
+                            <th>fruit,carrot</th>
+                        </tr>
+                        <%}%>
+                    </tbody>
+
+
+                </table>
+            </div>
+
+            <div class="double-margintop double-marginbottom">
+
+            </div>
+
+            <div class="double-margintop ">
+                <p>click the button below to download sample excel sheet</p>
+                <p class="btn btn-sm btn-info" id="excelDownload"><span><i class="icon-file-download"></i>&nbsp;</span>&nbsp;Download</p>
+            </div>
+        </fieldset>
+        <h6>Products sheet Selection.</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group tsf-step step-3">
+                        <label for="upload-box">
+                            Upload your .xls Products Excel sheet
+                        </label>                                      
+                        <input type="hidden" value="<%= session.getAttribute("Id")%>" id="userid" name="userid"/>
+                        <input type="file" id="excelFile" name="excelfile" value="" class="dropify" data-allowed-file-extensions="xls" data-max-file-size="10M" required/>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="margintop marginbottom">
+        <button class="btn btn-sm btn-danger left back" ><i class="icon-cancel-circle2 mr-2"></i>cancel</button>
+    </div>
+</div>

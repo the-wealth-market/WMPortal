@@ -1,0 +1,254 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="">
+    <form class="wizard-form listUserProductForm" action="#" data-fouc>
+        <h6>Product's Specifications</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Select a Top Category: <span class="text-danger">*</span></label>
+                        <select name="prodTopCategories" data-placeholder="Select a Category" 
+                                id="prodTopCategories" class="form-control form-control-select2 select-search select-clear required" data-fouc>
+
+                        </select>
+                    </div>
+                    <div class="form-group prod-cat-info hide">
+                        <label>Select a Category: <span class="text-danger">*</span></label>
+                        <select name="prodCategories" data-placeholder="Select a Category" 
+                                id="prodCategories" class="form-control form-control-select2 select-search select-clear required" data-fouc>
+
+                        </select>
+                    </div>
+                    <div class="form-group prod-sub-cat-info hide">
+                        <label>Select a sub-Category: <span class="text-danger">*</span></label>
+                        <select name="prodSubCategories" data-placeholder="Select a Category" 
+                                id="prodSubCategories" class="form-control form-control-select2 select-search select-clear required" data-fouc>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" prod-info hide">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group">
+                            <label>Product Name <span class="text-danger">*</span></label>
+                            <input type="text" id="prodName"  name="name" class="form-control required" placeholder="Product Name" autocomplete="off" >
+                        </div>
+                        <div class="form-group">
+                            <label>Give us a summary of your product <span class="text-danger">*</span></label>
+                            <input type="text" id="prodSummary"  name="summary" class="form-control required" placeholder="Product Summary"  autocomplete="off">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label>Brand </label>
+                            <input type="text" id=""  name="" class="form-control " placeholder="Product Brand" autocomplete="off" >
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label>Model </label>
+                            <input type="text" id=""  name="" class="form-control " placeholder="Product Model" autocomplete="off" >
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label>Main Color </label>
+                            <input type="text" id=""  name="" class="form-control " placeholder="Product color" autocomplete="off" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <h6>Product's Details.</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Brief Description:</label>
+                        <textarea name="description" id="prodDesc" maxlength="120" placeholder="Product Details" rows="4" cols="20" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Main Material</label>
+                        <input type="text" id="prodMat"  name="" class="form-control " placeholder="Main Material" autocomplete="off" >
+                    </div>
+                    <div class=" row">
+                        <div class="col-md-7">
+                            <div class="form-group">   
+                                <label>Product weight</label>
+                                <input type="text" id="prodWeight"  name="" class="form-control " placeholder="Product weight" autocomplete="off" >   
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Unit</label>
+                                <select name="unitSelect" data-placeholder="Select a unit" 
+                                        id="weightUnit" class="form-control form-control-select2 select-search select-clear unitSelect" data-fouc>
+                                    <option >select unit</option>
+                                    <option >pcs. -  pieces</option>
+                                    <option >kg -  Kilograms</option>
+                                    <option >g -  Grams</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <h6>Product's Properties</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group" id="prod-props">
+                        <label>prop: <span class="text-danger">*</span></label>
+                        <input type="text" name="prop" placeholder="Properties" class="form-control required">
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Price (per unit)<span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-size-lg font-weight-bold">₦</span>
+                                    </div>
+                                    <input type="number" id="prod-prop-price" name="prod-prop-price" class="form-control" required placeholder="Price">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text font-weight-bold ">.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Quantity <span class="text-danger">*</span></label>
+                                <input type="number" id="prod-prop-quantity" required  name="quantity" class="form-control required" placeholder="Quantity"  autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Unit <span class="text-danger">*</span></label>
+                                <select name="unitSelect" data-placeholder="Select a unit" 
+                                        id="prod-prop-unit" class="form-control form-control-select2 select-search select-clear unitSelect" data-fouc>
+                                    <option >select unit</option>
+                                    <option >pcs. -  pieces</option>
+                                    <option >kg -  Kilograms</option>
+                                    <option >g -  Grams</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="double-margintop">
+
+                        <h5><span class="marginright">Tick the box if your product has a warranty</span><span><input type="checkbox" id="warrantyCheck"></input></span></h5>
+                        <div class=" hide" id="prod-warranty-type">
+                            <label>Warranty-type: <span class="text-danger">*</span></label>
+                            <input type="text" name="prop" placeholder="warranty type" class="form-control " required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <h6>Product's Variations</h6>
+        <fieldset>
+
+            <div class="form-group ">
+                <div class="col-lg-12 double-marginbottom">
+                    <p>Variants: tick each variant to edit the properties</p>
+                    <div class="row" id="prodVariants">
+
+                        <div class="input-group check-parent check-WAR clone" >
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" class="form-control-styled check" value="ON" name=""  data-fouc>
+                                </div>
+                                <select id="variantSelect" >
+
+                                </select>
+                                <span class="input-group-text" for="parinput5">Qty.</span>
+                                <input type="text" class="form-control check-input" id="parinput5" placeholder="Quantity">
+                            </div>
+
+                            <div class="input-group-append">
+                                <span class="input-group-text" for="varPrice">Price: </span>
+                                <span class="input-group-text" for="varPrice">#</span>
+                                <input type="text" class="form-control check-input" id="varPrice" placeholder="Price">
+                                <span class="input-group-text font-weight-bold">.00</span>
+
+                            </div>
+                            <div class="hide check-group">check-WAR</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row double-marginbottom double-margintop">
+
+            </div>
+        </fieldset>
+
+        <h6>Product's Tags</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Add tags to increase product search <small class="text-danger">(Press the enter button after typing to continue - Max=>5)</small> <span class="text-danger">*</span></label>
+                        <input type="text" name="prodtags" class="form-control tokenfield prodtags" id="prodtags" required placeholder="Add tag" data-limit="5" value="Product," data-fouc>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <h6>Product's Preview</h6>
+        <fieldset>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <h5>Review your entered product Details before you finally submit for listing</h5>
+                </div>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <form class="wizard-form listProductImageForm hide" action="${pageContext.request.contextPath}/ProductImageServlet" method="POST" enctype="multipart/form-data" id="FileUploadForm" data-fouc>
+        <h6>Product Image</h6>
+        <fieldset>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group tsf-step step-3">
+                        <label for="upload-box">
+                            Upload your Product Image
+                        </label>                                      
+                        <input type="hidden" class="text" name="prodid" value="40" id="prodid"/>
+                        <input type="file" id="prod-upload-box" name="afile" value="" class="dropify" data-max-file-size="5M" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="margintop marginbottom">
+        <button class="btn btn-sm btn-danger left back" ><i class="icon-cancel-circle2 mr-2"></i>cancel</button>
+    </div>
+</div>
+

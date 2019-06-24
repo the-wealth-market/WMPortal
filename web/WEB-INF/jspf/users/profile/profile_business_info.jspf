@@ -1,0 +1,85 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="card">
+    <div class="card-body border-blue-300">
+        <div class="mb-3">
+            <h6 class="font-weight-semibold mb-0 mt-1 bizName">Hanna Dorman</h6>
+            <!--<span class="d-block text-muted">Business</span>-->
+        </div>
+
+        <div class="mt-1 mb-4">
+            <h6 class="font-weight-semibold">Business Industry</h6>
+            <p class="bizIndustry">Then sluggishly this camel learned woodchuck far stretched unspeakable </p>
+        </div>
+
+        <h6 class="font-weight-semibold">Business Type</h6>
+        <p class="mb-3 bizType">Dummy business type </p>
+
+        <div class="row text-center">
+            <div class="col-sm-6">
+                <div class="mb-6">
+                    <dl>
+                        <dt class="font-size-sm font-weight-bold text-uppercase">
+                            <i class="icon-envelop5 text-blue mr-2"></i>
+                            Business Email
+                        </dt>
+                        <dd class="bizEmail" id="bizEmail">Like partook magic this </dd>
+
+                    </dl>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="mb-6">
+                    <dl>
+                        <dt class="font-size-sm font-weight-bold text-uppercase">
+                            <i class="icon-phone2 text-blue mr-2"></i>
+                            Business Phone
+                        </dt>
+                        <dd id="bizPhone" class="bizPhone">And earthworm dear arose bald </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col-sm-4">
+                <div class="mb-4">
+                    <dl>
+                        <dt class="font-size-sm font-weight-bold text-uppercase">
+                            <i class="icon-IE text-blue mr-2"></i>
+                            Website Address
+                        </dt>
+                        <dd id="bizWebAddress" class="BizWebAddress">Like partook magic this </dd>
+
+                    </dl>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="mb-4">
+                    <dl>
+                        <dt class="font-size-sm font-weight-bold text-uppercase">
+                            <i class="icon-calendar2 text-blue mr-2"></i>
+                            Date Founded
+                        </dt>
+                        <dd id="bizDateFound" class="bizDateFound">And earthworm dear arose bald </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-4">
+                    <dl>
+                        <dt class="font-size-sm font-weight-bold text-uppercase">
+                            <i class="icon-sort-numeric-asc text-blue mr-2"></i>
+                            Company Registration Number
+                        </dt>
+                        <dd class="bizCACNumber" id="bizCACNumber">And earthworm dear arose </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <h6 class="font-weight-semibold">Business Description</h6>
+        <span id="bizDesc" class="BizDesc">So slit more darn hey well wore submissive savage this shark aardvark fumed thoughtfully much drank when angelfish so outgrew some alas vigorously therefore warthog superb less oh groundhog less alas gibbered barked some hey despicably with aesthetic hamster jay by luckily. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame</span>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark">
+    <div class="navbar-brand">
+        <a href="http://thewealthmarket.com/" class="d-inline-block" target="_blank">
+            <img src="../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Welcome To WM-Portal</span>
+        </span>
+
+
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page content -->
+<div class="page-content login-cover">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content d-flex justify-content-center align-items-center">
+
+            <!-- Registration form -->
+            <form name="registerForm" data-parsley-validate="" class="flex-fill">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <div class="text-center mb-3">
+                                    <i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+                                    <h5 class="mb-0">Create Account</h5>
+                                    <span class="d-block text-muted">All fields are required</span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="text" class="form-control" id="fname" required parsley-trigger="change" placeholder="First name">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-user-check text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="text" class="form-control" id="lastname" required parsley-trigger="change" placeholder="Last name">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-user-check text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="email" id="email" parsley-type="email" required parsley-trigger="change" name="email" class="form-control" placeholder="Your email">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-mention text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="tel" id="phone" data-mask="99999999999" required parsley-trigger="change" name="phone" data-parsley-type="digits" class="form-control" placeholder="Your Phone number">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-mobile text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <select class="form-control form-control-select2 select-search select-clear" parsley-trigger="change" id="gender" required>
+                                                <option>Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <div class="form-control-feedback">
+                                                <i class="icon-man-woman text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="date" id="datepicker-autoclose" required class="form-control ValdateFound required" value="1900-06-09">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-calendar2 text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="password" id="password" parsley-trigger="change" required class="form-control" placeholder="Create password">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-user-lock text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-feedback form-group-feedback-right">
+                                            <input type="password" required parsley-trigger="change" data-parsley-equalto="#password" required id="password2" class="form-control" placeholder="Repeat password">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-user-lock text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group text-center align-items-center form-group-feedback-right">
+                                    <div class="form-group form-group-feedback form-group-feedback-right">
+                                        <div class="form-check text-left ">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" name="checkTerms" class="form-input-styled" checked="true" data-fouc id="checkTerms">
+                                                Accept our <a href="#" id="LinkTerms">Terms &amp; Conditions.</a>
+                                            </label>
+                                        </div> 
+                                    </div>  
+                                    <button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right text-center align-items-center"><b>
+                                            <i class="icon-plus3"></i></b> Create Account</button>
+
+                                </div>
+                                <span class="form-text text-center text-muted">Already have an account <a href="#" class="CallIndex">Sign In</a></span>
+                                <span class="form-text text-center">For SMS Registration please text: reg email firstname lastname password to +12672024951</span>
+                                <span class="form-text text-center font-weight-thin">For example text: reg someone@example.com FirstSaint LastStephen passwrd</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- /registration form -->
+
+        </div>
+        <!-- /content area -->
+
+
+
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->

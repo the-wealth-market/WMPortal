@@ -1,0 +1,112 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark">
+    <input type="hidden" name="" value="<%= session.getAttribute("ValID")%>" id="ValID"/>
+    <input type="hidden" name="" value="<%= session.getAttribute("ValEmail")%>" id="ValEmail"/>
+    <input type="hidden" name="" value="<%= session.getAttribute("ValUserName")%>" id="ValEmail"/>
+    <div class="navbar-brand">
+        <a href="http://thewealthmarket.com/" class="d-inline-block" target="_blank">
+            <img src="../../global_assets/images/wm/wm-name3.png" alt="">
+        </a>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <span class="navbar-text ml-md-3 mr-md-auto">
+            <span class="badge bg-success">Welcome To WM-Portal</span>
+        </span>
+
+
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page content -->
+<!--<div class="page-content">-->
+<div class="page-content login-cover">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content d-flex justify-content-center align-items-center">
+
+            <!-- Registration form -->
+            <div class="flex-fill">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="card mb-0">
+                            <div class="card-body" id="user-signed-out" >
+                                <div class="text-center mb-3">
+                                    <i class="icon-mobile icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+                                    <h5 class="mb-0">Phone Number Validation</h5>
+                                    <span class="d-block text-muted">Account validation required</span>
+                                </div>
+                                <div id="firebaseui-container"></div>
+                            </div>
+
+
+                            <div class="card-body hide" id="user-signed-in">
+                                <div class="text-center mb-3">
+                                    <i class="icon-city icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+                                    <h5 class="mb-0">Personal Bank Account</h5>
+                                    <span class="d-block text-muted">Bank details required</span>
+                                </div>
+                                <form method="post" data-parsley-validate="" name="ValaddBankDetails">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="BankName">Select your bank</label>
+                                                <select data-placeholder="Select your Bank Name" id="ValBankName" class="form-control form-control-select2 select-search select-clear" data-fouc required parsley-trigger="change"></select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="AcctType">Select Bank Account Type</label>
+                                                <select data-placeholder="Select Account Type" id="ValAcctType" class="form-control form-control-select2 select-search select-clear" data-fouc required parsley-trigger="change">
+                                                    <option selected="selected" value="">Select Account Type</option>
+                                                    <option value="Savings">Savings</option>
+                                                    <option value="Current">Current</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="AcctNumber">Enter your Account Number</label>
+                                                <div id="bloodhound" class="m-b-1">
+                                                    <input class="typeahead form-control"  data-mask="9999999999" maxlength="10" id="ValAcctNumber" type="text" placeholder="Account Number" autocomplete="off"  required parsley-trigger="change"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="BVNNumber">Enter your BVN Number</label>
+                                                <input type="text" class="form-control"  data-mask="99999999999" maxlength="11" id="ValBVNNumber" placeholder="BVN Number" required parsley-trigger="change"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <button type="submit" class="btn bg-success btn-labeled  pull-left btn-labeled-right ml-auto text-center" id="ValAddBankInfo"><b><i class="icon-plus3"></i></b> Add Bank Details</button>
+                                    </div>
+                                    <div class="text-right">
+                                        <button type="submit" class="btn bg-orange-400 text-left CallIndex pull-left">Login</button>
+                                        <button type="button" class="btn bg-primary-400 text-right pull-right" id="SkipAddBank"> Skip Bank Details</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /registration form -->
+
+    </div>
+    <!-- /content area -->
+
+
+
+
+</div>
+<!-- /main content -->
+
+</div>
+<!-- /page content -->

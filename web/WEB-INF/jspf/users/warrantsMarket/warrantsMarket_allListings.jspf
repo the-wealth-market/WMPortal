@@ -1,0 +1,56 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light border-bottom-0">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">WarrantsMarket</span> - All Listings</h4>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+        </div>
+        <!-- Top breadcrumb line -->
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=WarrantsMarket" class="breadcrumb-item">WarrantMarket</a>
+                    <span class="breadcrumb-item active">All Listings</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center">
+                    <a href=".bd-modal-list-for-sale" data-toggle="modal" class="breadcrumb-elements-item">
+                        <i class="icon-compose mr-2"></i>
+                        List For Sale
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /breadcrumb line -->
+
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Inner container -->
+        <%@include file="warrantsMarket_content.jspf" %>
+        <!-- /inner container -->
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div> 

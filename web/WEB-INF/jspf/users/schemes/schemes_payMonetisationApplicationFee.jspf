@@ -1,0 +1,18 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-blue-800">
+            <h6 class="modal-title">Pay Application Fee</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div class="modal-body">
+            
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-left btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>

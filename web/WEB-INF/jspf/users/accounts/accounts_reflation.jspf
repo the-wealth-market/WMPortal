@@ -1,0 +1,39 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light border-bottom-0">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Accounts</span> - Reflation Rights</h4>
+            </div>
+
+        </div>
+        <!-- Top breadcrumb line -->
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Accounts" class="breadcrumb-item">Accounts</a>
+                    <span class="breadcrumb-item active">Reflation Rights</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- /breadcrumb line -->
+
+
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <%@include file="accounts_content.jspf" %>
+    <!-- /Content area -->
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div> 

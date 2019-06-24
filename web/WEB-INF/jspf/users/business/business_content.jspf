@@ -1,0 +1,315 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Business</span> - My Business(es)</h4>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Business" class="breadcrumb-item">Business</a>
+                    <span class="breadcrumb-item active">My Business(es)</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center cursor-pointer">
+                    <a data-toggle="modal" data-target=".bd-example-modalListNewBusiness" class="breadcrumb-elements-item">
+                        <i class="icon-add mr-2"></i>
+                        List New Business
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Inner container -->
+        <div class="d-flex align-items-start flex-column flex-md-row">
+
+            <!-- Left content -->
+
+            <div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left border-0 shadow-0 sidebar-expand-md">
+
+                <!-- Sidebar content -->
+                <div class="sidebar-content">
+
+
+                    <!-- Categories -->
+                    <div class="card">
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <span class="text-uppercase font-size-sm font-weight-semibold">Listed Business(es)</span>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <div class="nav nav-sidebar mb-2 bizcontainer">
+                                <li class="nav-item bizclone cursor-pointer">
+                                    <a href="#" class="nav-link">
+                                        <span class="businessName">wm biz</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /categories -->
+
+
+
+                </div>
+                <!-- /sidebar content -->
+
+            </div>
+            <!-- /left content -->
+
+
+            <!-- Right sidebar component -->
+            <div class="w-100 overflow-auto order-2 order-md-1">
+
+                <!-- Course overview -->
+                <div class="card">
+                    <!-- Cover area -->
+                    <div class="profile-cover">
+                        <div class="profile-cover-img"></div>
+                        <div class="media align-items-center text-center text-md-left flex-column flex-md-row m-0">
+                            <div class="mr-md-3 mb-2 mb-md-0">
+                                <a href="#" class="profile-thumb">
+                                    <img  class="border-white rounded-circle bizImage" width="48" height="48" alt="">
+                                </a>
+                            </div>
+
+                            <div class="media-body text-white">
+                                <h1 class="mb-0 bizname">Business Name</h1>
+                                <span class="d-block">Business</span>
+                            </div>
+
+                            <div class="ml-md-3 mt-2 mt-md-0">
+                                <ul class="list-inline list-inline-condensed mb-0">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="btn btn-light border-transparent" id="SwitchToBizAcct"  data-popup="tooltip" title="Switch To Business" data-placement="top" >
+                                            <i class="icon-loop mr-2"></i> Switch To <span class="bizname"></span>
+                                        </a>
+                                    </li>
+								
+                                    <li class="list-inline-item">
+                                        <a data-toggle="modal" data-target=".bd-example-modaladdChangeProfilePicture" 
+                                           data-popup="tooltip" title="Change Profile Image" data-placement="top" 
+                                           class="btn btn-outline bg-primary text-primary border-primary border-2 btn-icon rounded-round">
+                                            <i class="icon-camera"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="btn btn-outline bg-primary-700 btn-icon text-primary border-primary border-2 rounded-round"
+                                           data-popup="tooltip" title="Visit Facebook Page"  data-placement="top">
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round"
+                                           data-popup="tooltip" title="Visit Twitter Page" data-container="body" data-placement="top">
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="btn btn-outline bg-grey-800 btn-icon text-grey-800 border-grey-800 border-2 rounded-round"
+                                           data-popup="tooltip" title="Visit Instagram Page" data-container="body" data-placement="top">
+                                            <i class="icon-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-tabs-responsive bg-light border-top">
+                        <ul class="nav nav-tabs nav-tabs-bottom flex-nowrap mb-0">
+                            <li class="nav-item"><a href="#bizInfo" class="nav-link active" data-toggle="tab"><i class="icon-menu7 mr-2"></i> Overview</a></li>
+                            <li class="nav-item"><a href="#course-attendees" class="nav-link" data-toggle="tab"><i class="icon-people mr-2"></i> History</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="bizInfo">
+                            <div class="card-body">
+                                <div class="mt-1 mb-4">
+                                    <h6 class="font-weight-semibold">Business Industry</h6>
+                                    <p class="bizindus">Click a business to view Business Industry </p>
+                                </div>
+
+                                <h6 class="font-weight-semibold">Business Type</h6>
+                                <p class="mb-3 biztyp">Dummy business type </p>
+                                <div class="row text-center">
+                                    <div class="col-sm-6">
+                                        <div class="mb-6">
+                                            <dl>
+                                                <dt class="font-size-sm font-weight-bold text-uppercase">
+                                                    <i class="icon-envelop5 text-blue mr-2"></i>
+                                                    Business Email
+                                                </dt>
+                                                <dd class="bizemail">Click a business to view Email </dd>
+
+                                            </dl>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="mb-6">
+                                            <dl>
+                                                <dt class="font-size-sm font-weight-bold text-uppercase">
+                                                    <i class="icon-phone2 text-blue mr-2"></i>
+                                                    Business Phone
+                                                </dt>
+                                                <dd class="bizphone">Click a business to view Phone </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 text-center">
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <dl>
+                                                <dt class="font-size-sm font-weight-bold text-uppercase">
+                                                    <i class="icon-IE text-blue mr-2"></i>
+                                                    Website Address
+                                                </dt>
+                                                <dd class="bizweb">Click a business to view Website Address </dd>
+
+                                            </dl>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <dl>
+                                                <dt class="font-size-sm font-weight-bold text-uppercase">
+                                                    <i class="icon-calendar2 text-blue mr-2"></i>
+                                                    Date Founded
+                                                </dt>
+                                                <dd  class="bizdatefd">Click a business to view Date Founded </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <dl>
+                                                <dt class="font-size-sm font-weight-bold text-uppercase">
+                                                    <i class="icon-sort-numeric-asc text-blue mr-2"></i>
+                                                    Company Registration Number
+                                                </dt>
+                                                <dd class="bizcacnumb" >Click a business to view Company Registration Number </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="font-weight-semibold">Business Description</h6>
+                                <span class="bizdescriptn"> Click a business to view Business Description </span>
+                            </div>
+
+                            <div class="card-header header-elements-inline">
+                                <h5 class="card-title">Business Staff</h5><span class="badge badge-primary rounded-circle biz-staff-count">0</span>
+                            </div>
+
+                            <ul class="media-list media-list-linked">
+                                <li class="bizStaffList">
+                                    <a href="#" class="media staffclone hide">
+                                        <div class="mr-3"><img  class="rounded-circle staff-image" width="40" height="40" alt=""></div>
+                                        <div class="media-body">
+                                            <div class="media-title font-weight-semibold staff-name">Saint Deemene</div>
+                                            <span class="text-muted staff-email">st.deemene@yahoo.com</span>
+                                        </div>
+                                        <div class="align-self-center ml-3">
+                                            <span class="badge badge-primary staff-phone">07067483120</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="course-attendees">
+                            <div class="card-body">
+                                <div class="timeline timeline-center">
+                                    <div class="timeline-container" id="businessHistory">
+
+                                        <!-- Blog post -->
+                                        <div class="timeline-row timeline-row-full clone hide" id="timelinearray">
+                                            <div class="timeline-icon">
+                                                <img  class="histUserImage" alt="">
+                                            </div>
+
+                                            <div class="timeline-time">
+                                                <a href="#" class="histUserName">Lucy</a>
+                                                <div class="text-muted histTime">49 minutes ago</div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header header-elements-sm-inline">
+                                                    <h6 class="card-title histTitle">Himalayan sunset</h6>
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <div class="card-img-actions mb-3">
+                                                        <img class="card-img img-fluid histUserImage"  alt="" style="width: 48px; height: 48px;">
+                                                        <div class="card-img-actions-overlay card-img">
+                                                            <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round">
+                                                                <i class="icon-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <h6 class="mb-3">
+                                                        <i class="icon-comment-discussion mr-2"></i>
+                                                        <a href="#" class="histUserName">Jason Ansley</a> <span class="histUserType ml-3 text-muted italics"></span>
+                                                    </h6>
+
+                                                    <blockquote class="blockquote blockquote-bordered py-2 pl-3 mb-0">
+                                                        <p class="mb-2 font-size-base histDetails">When suspiciously goodness labrador understood rethought yawned grew piously endearingly inarticulate oh goodness jeez trout distinct hence cobra despite taped laughed the much audacious less inside tiger groaned darn stuffily metaphoric unihibitedly inside cobra.</p>
+                                                        <footer class="blockquote-footer histDate">Jason</footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /blog post -->
+                                        <!-- /video post -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /course overview -->
+
+            </div>
+            <!-- /right sidebar component -->
+
+        </div>
+        <!-- /inner container -->
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div>
