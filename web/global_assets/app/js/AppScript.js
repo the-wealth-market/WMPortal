@@ -207,12 +207,12 @@ function performPageActions() {
         $("#id-wm-mybids").addClass("active bg-white blacktext");
     } else if (page === "monetisation_application.jsp") {
         extension = "../../../";
-        ContractFunctions();
+        MonetisationFunctions();
         $("#id_main_semple").addClass("active");
         $("#id_main_money").addClass("active");
     } else if (page === "my_monetisation_applications.jsp") {
         extension = "../../../";
-        ContractFunctions();
+        MonetisationFunctions();
         $("#id_main_semple").addClass("active");
         $("#id_main_money").addClass("active");
     }
@@ -1919,6 +1919,10 @@ function CallSempleContract(data) {
     var newdata = [userid, data];
     showLoader();
     GetData("Schemes", "GetSempleContracts", "LoadSempleContracts", newdata);
+}
+
+function MonetisationFunctions(){
+    GetData("Schemes", "GetMyMonApplicatios", "LoadMyMonApplications");
 }
 
 function LoginFunctions() {
@@ -5656,6 +5660,117 @@ function DisplayMonetisationAppFee(data) {
         });
     }
 }
+
+function DisplayMyMonApplications(params){
+    var monAppParent = $("#myMonApplicationParent");
+    var child = $(".myMonAppClone");
+    if(params.length == 0 || params == ""){
+        $("<div>").text("No pending monetisation applications").addClass("text-center").appendTo(monAppParent);
+    }else{
+        monAppParent.empty();
+        $.each(params, function(ind, val){
+            var newChild = child.clone();
+            newChild.removeClass("myMonAppClone");
+            newChild.removeClass("hide");
+            newChild.addClass(ind);
+            var image_url = "../../../global_assets/app/img/ProfilePicture/user-" + val["userid"] + ".png";
+            if (imageExists(image_url) === false) {
+                image_url = "../../../global_assets/app/img/ProfilePicture/user-0.png";
+            }
+            newChild.find(".monAppUserImg").attr("src", image_url);
+            var Name = val["UserName"];
+            newChild.find(".monAppUserName").text(Name);
+            newChild.find(".monAppDateTime").text(val["date_applied"]);
+            newChild.find(".monUserID").val(val["userid"]);
+            newChild.find(".userUsedMonRuleName").text(val["monName"]);
+            newChild.find(".userUsedMonRuleID").text(val["monRuleId"]);
+            var maxVal = PriceFormat(parseInt(val["warrants_calculated"]));
+            newChild.find(".monExWarrants").text(maxVal);
+            newChild.find(".monAppFeePd").text(PriceFormat(parseInt(val["amount_paid"])));
+            newChild.find(".monAppFeeStatus").text(val["payment_status"]);
+            newChild.find(".monAppUserPayRef").text(val["payment_reference"]);
+            var appStatus = val["application_status"];
+            var goodsVerifed = val["verified"];
+            if(goodsVerifed == 1){
+                newChild.find(".verifiedBadge").removeClass("badge-secondary").addClass("badge-success").text("verified");
+                newChild.find(".ApproveMonetisation").removeClass("disableClick");
+            }else if(goodsVerifed == 2){
+                newChild.find(".verifiedBadge").removeClass("badge-secondary").addClass("badge-danger").text("Rejected");
+            }
+            var AppStatus = "";
+            appStatus == 0 ? AppStatus = "pending" : appStatus == 1 ? AppStatus = "Approved" : appStatus == 2 ? AppStatus = "Declined": AppStatus = "Not Recognised!!!";
+            newChild.find(".monAppStatus").text(AppStatus);
+            newChild.find(".monAppUserPayRef").text(val["payment_reference"]);
+            var DetailsButton = newChild.find(".ViewMonetisationGoods");
+            //Details Button
+            DetailsButton.click(function(){
+                $(".modal-view-monetisation-goods").on("show.bs.modal", function(){
+                    MonetisationGoodsDetails(val);
+                }).modal("show");
+
+            });
+            newChild.appendTo(monAppParent).show();
+        });
+        child.hide();
+    }
+}
+function MonetisationGoodsDetails(details){
+    var parent = $("#mon-inv-property");
+    parent.empty();
+    var child = $(".monGoodClone");
+    var productDetails = details['ProductDetails'];
+    var count = 0;
+    var grandTotal = 0;
+    var verified = details["verified"];
+    $.each(productDetails, function(index, product){
+        count++;
+        var newChild = child.clone();
+        newChild.removeClass("monGoodClone");
+        newChild.removeClass("hide");
+        newChild.addClass(index);
+        var image_url = extension + "global_assets/app/img/UnlistedProductImages/product-" + index + ".png";
+        if (imageExists(image_url) === false) {
+            image_url = extension + "global_assets/app/img/ProductImages/product-0.png";
+        }
+        newChild.find(".monGoodCount").text(count);
+        newChild.find(".monGoodImage").attr("src", image_url);
+        newChild.find(".monGoodImage").attr("alt", "Product "+ count+ " Listied by " + details["UserName"] + " on the wealth market");
+        var name = capitaliseFirstLetter(product["product_name"]);
+        newChild.find(".monGoodName").text(name);
+        newChild.find(".monGoodDesc").text(product["description"]);
+        var price = parseInt(product["proposed_price"]);
+        var newprice = PriceFormat(price);
+        newChild.find(".monGoodPrice").text(newprice);
+        var availQuantity = parseInt(product["quantity"]);
+        var appliedQuantity = parseInt(product["ProdAppliedQuant"]);
+        newChild.find(".monGoodAvailQuantity").text(availQuantity);
+        newChild.find(".monGoodAppliedQuantity").text(appliedQuantity);
+        var subTotal = price * appliedQuantity;
+        grandTotal += subTotal;
+        newChild.find(".monGoodSubtotal").text(PriceFormat(subTotal));
+        newChild.appendTo(parent).show();
+    });
+    $("#gTotal").text(PriceFormat(grandTotal));
+    
+    var monetisationPercent = parseInt(details["MonetisationDetails"]["percent"]);
+    var percentAmt = (monetisationPercent/100) * grandTotal;
+    var amtPaid = parseInt(details["amount_paid"]);
+    var calcWarrants = parseInt(details["warrants_calculated"]);
+    var expWarrants = parseInt(details["warrants_expected"]);
+    $(".amt-paid").text(PriceFormat(amtPaid));
+    $(".calc-percent").text(PriceFormat(percentAmt));
+    $(".exp-warrant").text(PriceFormat(expWarrants));
+    $(".calc-warrants").text(PriceFormat(calcWarrants));
+    if(verified == 1){
+        $(".mon-verification").text("Verified on "+details["date_verified"]).removeClass("text-muted").addClass("text-success");
+    }else if(verified == 2){
+        $(".mon-verification").text("Goods were not verified by the agent.").removeClass("text-muted").addClass("text-danger");
+    }else{
+        $(".mon-verification").text("waiting for verification").removeClass("text-success").addClass("text-muted");
+        
+    }
+    
+}
 //Monetistion
 
 function geoLocation() {
@@ -6295,6 +6410,11 @@ function linkToFunction(action, params) {
         case "LoadSubmitMonApp":
         {
             DisplaySubmitMonApplication(params);
+            break;
+        }
+        case "LoadMyMonApplications":
+        {
+            DisplayMyMonApplications(params);
             break;
         }
     }
