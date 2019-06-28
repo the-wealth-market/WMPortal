@@ -1922,7 +1922,7 @@ function CallSempleContract(data) {
 }
 
 function MonetisationFunctions(){
-    GetData("Schemes", "GetMyMonApplicatios", "LoadMyMonApplications");
+    GetData("Schemes", "GetMyMonApplications", "LoadMyMonApplications", userid);
 }
 
 function LoginFunctions() {
@@ -5714,6 +5714,7 @@ function DisplayMyMonApplications(params){
         child.hide();
     }
 }
+
 function MonetisationGoodsDetails(details){
     var parent = $("#mon-inv-property");
     parent.empty();
