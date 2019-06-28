@@ -61,7 +61,7 @@
                 <tbody id="myMonApplicationParent">
                     
                 </tbody>
-                <tr class="myMonAppClone ">
+                <tr class="myMonAppClone hide">
                         <td>
                             <div class="media">
                                 <div class="mr-3">
@@ -94,7 +94,7 @@
 
                                 <li>
                                     Verified:
-                                    <span href="#" class="badge-secondary padding-horizontal verifiedBadge">waiting</span>
+                                    <span href="#" class="badge-secondary pl-2 pr-2 verifiedBadge">waiting</span>
                                 </li>
                             </ul>
                         </td>
@@ -125,7 +125,7 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a href="#" class="dropdown-item ViewMonetisationGoods"><i class="icon-file-pdf"></i>View goods details</a>
-                                        <a href="#" class="dropdown-item PayMonAppFee"><i class="icon-file-pdf"></i>Pay Application Fee</a>
+                                        <a href="#" class="dropdown-item PayMonAppFee disableClick"><i class="icon-file-pdf"></i>Pay Application Fee</a>
                                         <div class="dropdown-divider"></div>
                                         <a href="#" class="dropdown-item"><i class="icon-warning2"></i> Report problem</a>
                                     </div>

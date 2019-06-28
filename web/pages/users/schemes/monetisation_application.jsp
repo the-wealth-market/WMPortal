@@ -70,7 +70,6 @@
         <script src="../../../global_assets/app/js/app.js"></script>
         <script src="../../../global_assets/app/js/helper.js"></script>
         <script src="../../../global_assets/app/js/AppScript.js"></script>
-        <script src="https://js.paystack.co/v1/inline.js"></script>
 
         <!-- /theme JS files -->
         <script src="../../../global_assets/app/js/custom.js"></script>

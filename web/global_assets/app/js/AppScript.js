@@ -5702,12 +5702,19 @@ function DisplayMyMonApplications(params){
             newChild.find(".monAppStatus").text(AppStatus);
             newChild.find(".monAppUserPayRef").text(val["payment_reference"]);
             var DetailsButton = newChild.find(".ViewMonetisationGoods");
+            var PayButton = newChild.find(".PayMonAppFee");
+            if(appStatus == 1){
+                PayButton.removeClass("disableClick");
+            }
             //Details Button
             DetailsButton.click(function(){
                 $(".modal-view-monetisation-goods").on("show.bs.modal", function(){
                     MonetisationGoodsDetails(val);
                 }).modal("show");
 
+            });
+            PayButton.click(function(){
+                payWithPaystack(userid, appFee, loginuseremail, actualamount + ":" + appFee, "Monetisation Application Fee", StringifiedValue + ";" + monRuleID);
             });
             newChild.appendTo(monAppParent).show();
         });
