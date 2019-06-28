@@ -210,6 +210,11 @@ function performPageActions() {
         ContractFunctions();
         $("#id_main_semple").addClass("active");
         $("#id_main_money").addClass("active");
+    } else if (page === "my_monetisation_applications.jsp") {
+        extension = "../../../";
+        ContractFunctions();
+        $("#id_main_semple").addClass("active");
+        $("#id_main_money").addClass("active");
     }
     checkUser();
     btnEvents();
