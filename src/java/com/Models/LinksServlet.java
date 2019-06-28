@@ -179,7 +179,7 @@ public class LinksServlet extends HttpServlet {
                     break;
                 }
                 case "MyMonetisationApplications": {
-                    response.sendRedirect("pages/users/schemes/monetisation_application.jsp");
+                    response.sendRedirect("pages/users/schemes/my_monetisation_applications.jsp");
                     break;
                 }
                 case "Search": {
