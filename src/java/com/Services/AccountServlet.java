@@ -289,6 +289,19 @@ public class AccountServlet extends HttpServlet {
                             json2 = new Gson().toJson(result);
                             String json3 = new Gson().toJson(message);
                             json = "[" + json1 + "," + json2 + "," + json3 + "]";
+                        } else if (paytype.equals("Monetisation Application Fee")) {
+                            int applicationID = MemberUserID;
+                            result = GeneralSchemesManager.ImplementMoneisation(applicationID, Amount, Amount, trxref, transcode, Status, paytype);
+                            if (result.equals("success")) {
+                                message = "Your Payment was Successful. Check your Messages for details";
+                            } else {
+                                result = "warning";
+                                message = "Something went wrong! We would fix it in no time!";
+                            }
+                            json1 = new Gson().toJson(paytype);
+                            json2 = new Gson().toJson(result);
+                            String json3 = new Gson().toJson(message);
+                            json = "[" + json1 + "," + json2 + "," + json3 + "]";
                         }
                     }
                     break;

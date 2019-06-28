@@ -5714,7 +5714,7 @@ function DisplayMyMonApplications(params){
 
             });
             PayButton.click(function(){
-                payWithPaystack(userid, appFee, loginuseremail, actualamount + ":" + appFee, "Monetisation Application Fee", StringifiedValue + ";" + monRuleID);
+                payWithPaystack(val["id"], paymentamount, email, actualamount, "Monetisation Application Fee");
             });
             newChild.appendTo(monAppParent).show();
         });
