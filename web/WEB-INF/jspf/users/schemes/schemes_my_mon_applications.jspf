@@ -125,7 +125,7 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a href="#" class="dropdown-item ViewMonetisationGoods"><i class="icon-file-pdf"></i>View goods details</a>
-                                        <a href="#" class="dropdown-item PayMonAppFee disableClick"><i class="icon-file-pdf"></i>Pay Application Fee</a>
+                                        <a href="#" class="dropdown-item PayMonAppFee disableClick hide"><i class="icon-file-pdf"></i>Pay Application Fee</a>
                                         <div class="dropdown-divider"></div>
                                         <a href="#" class="dropdown-item"><i class="icon-warning2"></i> Report problem</a>
                                     </div>

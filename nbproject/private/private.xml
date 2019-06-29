@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/ndfmac/Dropbox/NDF/WMPortal/web/global_assets/app/js/AppScript.js</file>
-            <file>file:/Users/ndfmac/Dropbox/NDF/WMPortal/src/java/com/Mobile/MTransactionServlet.java</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/web/WEB-INF/jspf/users/schemes/schemes_monetisation.jspf</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/src/java/com/Models/LinksServlet.java</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/src/java/com/Services/SchemesServlet.java</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/web/WEB-INF/jspf/users/schemes/schemes_my_mon_applications.jspf</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/src/java/com/Services/AccountServlet.java</file>
+            <file>file:/C:/Users/Public/Documents/NetBeansProjects/NewWMApps/WMPortal/web/global_assets/app/js/AppScript.js</file>
         </group>
     </open-files>
 </project-private>

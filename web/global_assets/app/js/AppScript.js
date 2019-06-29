@@ -5702,11 +5702,14 @@ function DisplayMyMonApplications(params){
                 newChild.find(".verifiedBadge").removeClass("badge-secondary").addClass("badge-danger").text("Rejected");
             }
             var AppStatus = "";
-            appStatus == 0 ? AppStatus = "pending" : appStatus == 1 ? AppStatus = "Approved" : appStatus == 2 ? AppStatus = "Declined": AppStatus = "Not Recognised!!!";
+            appStatus == 0 ? AppStatus = "pending" : appStatus == 1 ? AppStatus = "Approved" : appStatus == 2 ? AppStatus = "Declined": appStatus == 3 ? AppStatus = "Rights Granted": appStatus == 4 ? AppStatus = "Completed": AppStatus = "Not Recognised!!!";
             newChild.find(".monAppStatus").text(AppStatus);
             newChild.find(".monAppUserPayRef").text(val["payment_reference"]);
             var DetailsButton = newChild.find(".ViewMonetisationGoods");
             var PayButton = newChild.find(".PayMonAppFee");
+            if(appStatus == 1){
+                PayButton.removeClass("hide");
+            }
             if(appStatus == 1){
                 PayButton.removeClass("disableClick");
             }
