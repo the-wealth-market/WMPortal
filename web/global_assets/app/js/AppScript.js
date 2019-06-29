@@ -2626,6 +2626,8 @@ function DisplayPaymentResponse(data) {
         });
     } else if (data[0] === "Validation Fees") {
         DisplayValidateAccount(data);
+    } else if (data[0] === "Monetisation Application Fee") {
+        DisplayMonPayAppFee(data);
     }
 }
 
@@ -5690,6 +5692,8 @@ function DisplayMyMonApplications(params){
             newChild.find(".monAppFeeStatus").text(val["payment_status"]);
             newChild.find(".monAppUserPayRef").text(val["payment_reference"]);
             var appStatus = val["application_status"];
+            var actualamount = parseInt(val["calculated_goods_value"]);
+            var paymentamount = parseInt(val["AppFee_Calculated"]);
             var goodsVerifed = val["verified"];
             if(goodsVerifed == 1){
                 newChild.find(".verifiedBadge").removeClass("badge-secondary").addClass("badge-success").text("verified");
@@ -5714,7 +5718,7 @@ function DisplayMyMonApplications(params){
 
             });
             PayButton.click(function(){
-                payWithPaystack(val["id"], paymentamount, email, actualamount, "Monetisation Application Fee");
+                payWithPaystack(val["id"], paymentamount, val["UserEmail"], actualamount, "Monetisation Application Fee");
             });
             newChild.appendTo(monAppParent).show();
         });
@@ -5778,6 +5782,20 @@ function MonetisationGoodsDetails(details){
         
     }
     
+}
+
+function DisplayMonPayAppFee(data){
+    swal({
+        title: data[0],
+        text: data[2],
+        type: data[1],
+        showCancelButton: false,
+        confirmButtonClass: 'btn btn-' + data[1],
+        confirmButtonText: 'Continue',
+        onClose: function () {
+            window.location.reload();
+        }
+    });
 }
 //Monetistion
 

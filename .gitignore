@@ -12,8 +12,8 @@ nbactions.xml
 nb-configuration.xml
 /src/**/tmp # exclude any /tmp files or folders at any level in the /src/ folder.
 **/nbproject/private/
-**/nbproject/private/*
-**/nbproject/private/private.xml
+nbproject/private/*
+nbproject/private/private.xml
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
 **/nbproject/build-impl.xml
