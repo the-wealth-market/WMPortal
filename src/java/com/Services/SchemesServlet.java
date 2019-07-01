@@ -169,6 +169,12 @@ public class SchemesServlet extends HttpServlet {
                     json = new Gson().toJson(result);
                     break;
                 }
+                case "GetMyMonApplications":{
+                    int data = Integer.parseInt(request.getParameter("data"));
+                    HashMap<String, HashMap<String, Object>> applications = GeneralSchemesManager.GetUserMonetisationApplications(data);
+                    json = new Gson().toJson(applications);
+                    break;
+                }
 
             }
             response.setContentType("application/json");

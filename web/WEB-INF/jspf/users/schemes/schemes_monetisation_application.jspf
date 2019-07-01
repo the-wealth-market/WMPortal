@@ -21,9 +21,9 @@
 
             <div class="header-elements d-none">
                 <div class="breadcrumb justify-content-center cursor-pointer">
-                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MonetisationApplication" class="breadcrumb-elements-item">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyMonetisationApplications" class="breadcrumb-elements-item">
                         <i class="icon-hand mr-2"></i>
-                        Apply
+                        My Monetisation Applications
                     </a>
                 </div>
             </div>

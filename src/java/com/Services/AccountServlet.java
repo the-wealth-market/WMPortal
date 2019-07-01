@@ -226,20 +226,21 @@ public class AccountServlet extends HttpServlet {
                     int MemberUserID = Integer.parseInt(userid);
                     int Amount = Integer.parseInt(actualamount);
                     String message = "";
-                    String payresult = PayStackManager.getInstance().PayStackPay(trxref);
-                    JSONParser parser = new JSONParser();
-                    JSONObject jsonParameter = null;
-                    try {
-                        jsonParameter = (JSONObject) parser.parse(payresult);
-                    } catch (Exception e) {
-                        message = "Your payment validation was not successful, Please contact the admin if your account was debited and send prove of payment!";
-                        json1 = new Gson().toJson(paytype);
-                        json2 = new Gson().toJson(result);
-                        String json3 = new Gson().toJson(message);
-                        json = "[" + json1 + "," + json2 + "," + json3 + "]";
-                        e.printStackTrace();
-                    }
-                    String Status = jsonParameter.get("status").toString();
+//                    String payresult = PayStackManager.getInstance().PayStackPay(trxref);
+//                    JSONParser parser = new JSONParser();
+//                    JSONObject jsonParameter = null;
+//                    try {
+//                        jsonParameter = (JSONObject) parser.parse(payresult);
+//                    } catch (Exception e) {
+//                        message = "Your payment validation was not successful, Please contact the admin if your account was debited and send prove of payment!";
+//                        json1 = new Gson().toJson(paytype);
+//                        json2 = new Gson().toJson(result);
+//                        String json3 = new Gson().toJson(message);
+//                        json = "[" + json1 + "," + json2 + "," + json3 + "]";
+//                        e.printStackTrace();
+//                    }
+//                    String Status = jsonParameter.get("status").toString();
+                    String Status = "true";
                     if (Status.equals("false")) {
                         message = "Your payment validation was not successful, Please contact the admin if your account was debited and send prove of payment!";
                         json1 = new Gson().toJson(paytype);
@@ -281,6 +282,19 @@ public class AccountServlet extends HttpServlet {
                             result = GeneralAccountManager.CreateNewInventory(MemberUserID, 0, Amount, trxref, transcode, paytype, 0, "Cash");
                             if (result.equals("success")) {
                                 message = "Your Payment was Successful. Check your Messages for details";
+                            } else {
+                                result = "warning";
+                                message = "Something went wrong! We would fix it in no time!";
+                            }
+                            json1 = new Gson().toJson(paytype);
+                            json2 = new Gson().toJson(result);
+                            String json3 = new Gson().toJson(message);
+                            json = "[" + json1 + "," + json2 + "," + json3 + "]";
+                        } else if (paytype.equals("Monetisation Application Fee")) {
+                            int applicationID = MemberUserID;
+                            result = GeneralSchemesManager.ImplementMoneisation(applicationID, Amount, Amount, trxref, transcode, Status, paytype);
+                            if (result.equals("success")) {
+                                message = "Your Monetisation Application Has been fulfilled \n Check your Messages and Market warrants account";
                             } else {
                                 result = "warning";
                                 message = "Something went wrong! We would fix it in no time!";

@@ -40,6 +40,9 @@
     <div  class="modal fade semple-contract-display2-modal">
         <%@include file="../users/schemes/schemes_semple_contract_display2.jspf" %>
     </div>
+    <div  class="modal fade modal-view-monetisation-goods">
+        <%@include file="../users/schemes/schemes_monetisation_inventory_details.jspf" %>
+    </div>
 
 
 

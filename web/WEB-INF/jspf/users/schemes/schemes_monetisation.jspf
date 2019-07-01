@@ -31,6 +31,14 @@
                     </a>
                 </div>
             </div>
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center cursor-pointer">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MyMonetisationApplications" class="breadcrumb-elements-item">
+                        <i class="icon-hand mr-2"></i>
+                        My Monetisation Applications
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /page header -->

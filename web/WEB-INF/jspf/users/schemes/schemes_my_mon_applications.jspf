@@ -1,0 +1,154 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content-wrapper">
+
+    <!-- Page header -->
+    <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Schemes</span> - Monetisation</h4>
+            </div>
+
+
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=Dashboard" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MYCA" class="breadcrumb-item">Schemes</a>
+                    <span class="breadcrumb-item active">Monetisation</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center cursor-pointer">
+                    <a href="${pageContext.request.contextPath}/ControllerServlet?action=Link&type=MonetisationApplication" class="breadcrumb-elements-item">
+                        <i class="icon-hand mr-2"></i>
+                        Apply for Monetisation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Customers -->
+        <div class="card">
+            <div class="card-header header-elements-inline">
+                <h5 class="card-title mon-table-title">My Monetisation Applications</h5>
+            </div>
+
+            <table class="table table-striped text-nowrap table-customers">
+                <thead>
+                    <tr>
+                        <th>My Detail</th>
+                        <th>Monetisation Applied</th>
+                        <th>Goods Verification</th>
+                        <th>Payment Reference</th>
+                        <th>Application fee</th>
+                        <th>Status</th>
+                        <th>Options</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="myMonApplicationParent">
+                    
+                </tbody>
+                <tr class="myMonAppClone hide">
+                        <td>
+                            <div class="media">
+                                <div class="mr-3">
+                                    <a href="#!">
+                                        <img src="../../../global_assets/images/placeholders/placeholder.jpg" width="40" height="40" class="rounded-circle monAppUserImg" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="media-body align-self-center">
+                                    <a href="user_pages_profile_tabbed.html" class="font-weight-semibold monAppUserName">James Alexander</a>
+                                    <div class="text-muted font-size-sm">
+                                        Date Applied: <span class="monAppDateTime">2016.12.30</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" class="monUserID"/>
+                        </td>
+                        <td class="">
+                            <span class="userUsedMonRuleName">
+                                Standard Monetisation
+                            </span>
+                            <input type="hidden" class="userUsedMonRuleID"/>
+                        </td>
+                        <td >
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    Value:
+                                    <a href="#" class="monExWarrants">N250,000.00</a>
+                                </li>
+
+                                <li>
+                                    Verified:
+                                    <span href="#" class="badge-secondary pl-2 pr-2 verifiedBadge">waiting</span>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="monAppUserPayRef">
+                            N/A
+                        </td>
+                        <td>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    Amount Pd:
+                                    <a href="#" class="monAppFeePd">0</a>
+                                </li>
+
+                                <li>
+                                    Pay Status:
+                                    <a href="#" class="monAppFeeStatus">false</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h6 class="mb-0 font-weight-semibold monAppStatus">Pending</h6>
+                        </td>
+                        <td class="text-right">
+                            <div class="list-icons">
+                                <div class="list-icons-item dropdown">
+                                    <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                        <i class="icon-menu7"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item ViewMonetisationGoods"><i class="icon-file-pdf"></i>View goods details</a>
+                                        <a href="#" class="dropdown-item PayMonAppFee disableClick hide"><i class="icon-file-pdf"></i>Pay Application Fee</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item"><i class="icon-warning2"></i> Report problem</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="pl-0"></td>
+                    </tr>
+            </table>
+        </div>
+        <!-- /customers -->
+
+    </div>
+    <!-- /content area -->
+
+
+    <!-- Footer -->
+    <%@include file="../../general/footer1.jspf" %>
+    <!-- /footer -->
+
+</div>
+    <style>
+        .disableClick{
+            pointer-events: none;
+        }
+    </style>
